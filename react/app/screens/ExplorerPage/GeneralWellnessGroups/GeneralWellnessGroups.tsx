@@ -34,17 +34,6 @@ export default function GeneralWellnessGroups() {
        <Text style={{textAlign: 'right',}}>about: hello, this group is open up about....</Text>
        <Text style={{textAlign: 'right',}}>(Group Name)</Text>
         </View>
-        
-        {/* 
-        TO DO:
-        1. CREATE A CONTAINER THAT HOLDS A WELLNESS GROUP CARD 
-        2. A WELLNESS GROUP CARD CONTAINS: 
-          -ABOUT GROUP
-          -GROUP NAME
-          -IMAGE BOX
-          - IT MUST BE INTERACTIVE
-        */}
-        
       </View>
     ) 
 }

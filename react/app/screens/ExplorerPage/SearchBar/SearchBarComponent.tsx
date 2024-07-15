@@ -25,7 +25,7 @@ export default function SearchBarComponent() {
   
   return (
       <View style={styles.view}>
-        <SearchBar
+        <SearchBar 
           placeholder="Type group here..."
           onChangeText={updateSearch}
           value={search}
@@ -40,6 +40,7 @@ export default function SearchBarComponent() {
 const styles = StyleSheet.create({
 view: {
   margin: 10,
+
 },
 
 });

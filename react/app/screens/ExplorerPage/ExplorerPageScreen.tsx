@@ -13,12 +13,15 @@ import {
 } from "react-native";
 import SearchBarComponent from "./SearchBar/SearchBarComponent";
 import GeneralWellnessGroups from "./GeneralWellnessGroups/GeneralWellnessGroups";
+import Icon from 'react-native-vector-icons/FontAwesome';
+import { blue } from "react-native-reanimated/lib/typescript/reanimated2/Colors";
 
 export default function ExplorerPage() {
   
   return (
     <View>
       <SearchBarComponent/>
+      <Icon name="user" size={30} color="black"></Icon>
       <GeneralWellnessGroups/>
     </View>
   );
