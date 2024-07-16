@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import { SearchBar } from '@rneui/themed';
 import {
+  Alert,
+  Modal,
   Button,
   Image,
   StyleSheet,
@@ -14,10 +16,11 @@ import {
 import SearchBarComponent from "./SearchBar/SearchBarComponent";
 import GeneralWellnessGroups from "./GeneralWellnessGroups/GeneralWellnessGroups";
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { blue } from "react-native-reanimated/lib/typescript/reanimated2/Colors";
 
 export default function ExplorerPage() {
-  
+  const [modalVisible, setModalVisible] = useState(false);
+
+
   return (
     <View>
       <SearchBarComponent/>
@@ -32,7 +35,4 @@ const styles = StyleSheet.create({
 view: {
   margin: 10,
 }
-
-
- 
 });
