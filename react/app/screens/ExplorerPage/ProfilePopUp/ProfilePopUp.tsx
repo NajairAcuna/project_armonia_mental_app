@@ -41,7 +41,7 @@ export default function ProfilePopUp (){
             <View style={styles.modalContent}>
                 <Text> Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</Text>
              <TouchableOpacity style={styles.closeButton} onPress={closeModal}>
-             <Text style={styles.modalText}>Close</Text>
+             <Text style={styles.modalText}>X</Text>
              </TouchableOpacity>
             </View>
           </View>
@@ -54,10 +54,11 @@ export default function ProfilePopUp (){
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center'
+        justifyContent: 'center',
     },
     openButton: {
-        height: 30
+        height: 40,
+        marginHorizontal: 10
     },
     modalContainer: {
         flex: 1,
@@ -72,6 +73,7 @@ const styles = StyleSheet.create({
     },
     modalText: {
         fontSize: 16,
+        marginLeft: 10,
         marginBottom: 10,
     },
     closeButton: {

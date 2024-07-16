@@ -15,7 +15,6 @@ import {
   ViewStyle,
   Pressable,
 } from "react-native";
-import { BackgroundImage } from '@rneui/base';
 
 export default function GeneralWellnessGroups() {
     return(
@@ -24,7 +23,7 @@ export default function GeneralWellnessGroups() {
         justifyContent: 'flex-start',
       }}>
        <View style={{width: 250, height: 150, backgroundColor: '#ddd', padding: 10}}>
-        <Link href="/screens/YourWellnessGroups/YourWellnessGroups">
+        <Link href="/screens/YourWellnessGroups/YourWellnessGroupsScreen">
        <Text style={{textAlign: 'right'}}>about: hello, this group is open up about....</Text>
        <Text style={{textAlign: 'right'}}>(Group Name)</Text>
        </Link>
