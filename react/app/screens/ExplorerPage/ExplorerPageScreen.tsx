@@ -15,16 +15,15 @@ import {
 } from "react-native";
 import SearchBarComponent from "./SearchBar/SearchBarComponent";
 import GeneralWellnessGroups from "./GeneralWellnessGroups/GeneralWellnessGroups";
-import Icon from 'react-native-vector-icons/FontAwesome';
+import ProfilePopUp from "./ProfilePopUp/ProfilePopUp";
 
 export default function ExplorerPage() {
-  const [modalVisible, setModalVisible] = useState(false);
 
 
   return (
     <View>
       <SearchBarComponent/>
-      <Icon name="user" size={30} color="black"></Icon>
+      <ProfilePopUp/>
       <GeneralWellnessGroups/>
     </View>
   );
