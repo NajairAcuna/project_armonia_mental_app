@@ -16,6 +16,8 @@ import {
 import SearchBarComponent from "./SearchBar/SearchBarComponent";
 import GeneralWellnessGroups from "./GeneralWellnessGroups/GeneralWellnessGroups";
 import ProfilePopUp from "./ProfilePopUp/ProfilePopUp";
+import TrophyButton from "./TrophyButton/TrophyButton";
+
 
 export default function ExplorerPage() {
 
@@ -23,8 +25,9 @@ export default function ExplorerPage() {
   return (
     <View>
       <SearchBarComponent/>
-      <ProfilePopUp/>
+      <ProfilePopUp/>    
       <GeneralWellnessGroups/>
+      {/* <TrophyButton/> */}
     </View>
   );
   };
@@ -32,6 +35,7 @@ export default function ExplorerPage() {
 
 const styles = StyleSheet.create({
 view: {
-  margin: 10,
+  
 }
+
 });
