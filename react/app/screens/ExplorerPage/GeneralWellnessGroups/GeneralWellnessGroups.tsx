@@ -25,12 +25,13 @@ export default function GeneralWellnessGroups() {
        <View style={{width: 250, height: 150, backgroundColor: '#ddd', padding: 10, marginTop: 90, borderWidth: 5}}>
         <Link href="/screens/YourWellnessGroups/YourWellnessGroupsScreen">
        <Text style={{textAlign: 'right'}}>about: hello, this group is open up about....</Text>
-       <Text style={{textAlign: 'right'}}>(Group Name)</Text>
        </Link>
+       <Text style={{textAlign: 'right', top: 70}}>(Group Name)</Text>
+       
         </View>
         <View style={{width: 250, height: 150, backgroundColor: '#ddd', padding: 10, marginTop: 50, borderWidth: 5}}>
-       <Text style={{textAlign: 'right',}}>about: hello, this group is open up about....</Text>
-       <Text style={{textAlign: 'right',}}>(Group Name)</Text>
+       <Text style={{textAlign: 'right'}}>about: hello, this group is open up about....</Text>
+       <Text style={{textAlign: 'right', top: 70}}>(Group Name)</Text>
         </View>
       </View>
     ) 

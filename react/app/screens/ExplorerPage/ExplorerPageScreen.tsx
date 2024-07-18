@@ -16,9 +16,10 @@ import {
 import SearchBarComponent from "./SearchBar/SearchBarComponent";
 import GeneralWellnessGroups from "./GeneralWellnessGroups/GeneralWellnessGroups";
 import ProfilePopUp from "./ProfilePopUp/ProfilePopUp";
-import TrophyButton from "./TrophyButton/TrophyButton";
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 import { Link, useNavigation } from "expo-router";
+import YourFriends from "../YourFriends/YourFriendsScreen";
+
 
 
 export default function ExplorerPage() {
@@ -37,12 +38,15 @@ export default function ExplorerPage() {
         <ProfilePopUp/>
       </View>
 
-      <Text style={styles.MotivationalQuote}>Motivational Quote</Text>    
+      <Text style={styles.MotivationalQuote}>Motivational Quote</Text> 
       <GeneralWellnessGroups/>
-      {/* <TrophyButton/> */}
-      <Link style={styles.FriendsIcon} href="screens/YourFriends/YourFriendsScreen">
-      <Icon name="user"></Icon>
+      <View style={styles.IconsForBar}>
+      <Link  href="/YourFriends/YourFriendsScreen">
+      <Icon size={40} name="user"></Icon>
       </Link>
+      <Icon name="plus" size={40}></Icon>
+      <Icon name="handshake" size={40}></Icon>
+      </View>
     </View>
   );
   };
@@ -52,19 +56,24 @@ const styles = StyleSheet.create({
 view: {
   
 },
-FriendsIcon: {
-
+IconsForBar: {
+  top: 670,
+ justifyContent: "space-evenly",
+ left: 10,
+ flexDirection: "row",
 },
 MotivationalQuote: {
   textAlign: 'center',
   fontWeight: 'bold',
   fontSize: 30,
-},
-Container1: {
-  backgroundColor: "#00e30b"
+  top: 70
+
 },
 Container2: { 
-  flex: 1,
-  flexDirection: "row"
+  flex: -1,
+  flexDirection: "row",
+  display: "flex",
+  justifyContent: "space-evenly"
+  // backgroundColor: "#00e30b"
 }
 });

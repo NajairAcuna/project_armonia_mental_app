@@ -1,4 +1,4 @@
-import { useNavigation } from "expo-router";
+import { Link,useNavigation } from "expo-router";
 import React, { useEffect, useState } from "react"
 import {
   Alert,
@@ -16,6 +16,7 @@ import {
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 
+
 export default function YourFriends() {
     const navigation = useNavigation();
 
@@ -23,6 +24,7 @@ export default function YourFriends() {
       navigation.setOptions({headerShown: false});
   
     }, [navigation]);
+
     return(
         <View>
             <Icon name="user"></Icon>

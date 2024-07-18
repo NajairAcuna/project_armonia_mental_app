@@ -53,13 +53,14 @@ export default function ProfilePopUp (){
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        justifyContent: 'center',
+        // flex: 1,
+        // justifyContent: 'center',
+       
     },
     openButton: {
-        height: 40,
-        overflow: 'hidden',
-        
+        flex: -1,
+        alignSelf: "center",
+        top: 60
     },
     modalContainer: {
         flex: 1,

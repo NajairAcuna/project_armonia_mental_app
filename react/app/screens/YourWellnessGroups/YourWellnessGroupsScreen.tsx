@@ -21,10 +21,13 @@ export default function WellnessGroups() {
   }, [navigation]);
   return (
     <View>
-      <Text style={{fontSize: 35, alignSelf: "center",}}>(group name)</Text>
-      <Text style={{fontSize: 35, marginVertical: 100}}>Members</Text>
-      <Text style={{fontSize: 35, marginVertical: -40 ,fontWeight: 'bold'}}>About:</Text>
-      <Text style={{marginVertical: 30, fontSize: 20}}> Hello, this group is to open up about depression and try to help deal with hope to see you in here.</Text>
+      <Text style={{top: 49, fontSize: 35, alignSelf: "center", paddingTop: 20,paddingBottom: 20, borderWidth: 1,}}>(group name)</Text>
+      <Text style={{fontSize: 35, top: 55, left: 105}}>Members: 9 </Text>
+      <Text style={{fontSize: 35, top: 70 ,fontWeight: 'bold', left: 10}}>About:</Text>
+      <Text style={{top: 70, fontSize: 20, right: -10}}> Hello, this group is to open up about depression and try to help deal with hope to see you in here.</Text>
+      <Text style={{alignSelf: "center", top: 140, fontSize: 25, left: -90, borderWidth: 2, paddingTop: 5, paddingBottom: 5, paddingLeft: 30, paddingRight: 30  }}>Join</Text>
+      <Text style={{alignSelf: "center", top: 96, fontSize: 25, left: 90, borderWidth: 2, paddingTop: 5, paddingBottom: 5, paddingLeft: 30, paddingRight: 30  }}>Request</Text>
     </View>
   )
 }
+
