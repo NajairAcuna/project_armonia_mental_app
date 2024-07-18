@@ -19,6 +19,8 @@ import ProfilePopUp from "./ProfilePopUp/ProfilePopUp";
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import { Link, useNavigation } from "expo-router";
 import YourFriends from "../YourFriends/YourFriendsScreen";
+import YourFriendsIcon from "./YourFriendsIcon/YourFriendsIconScreen";
+import WhatAreYouFeelingIconScreen from "./WhatAreYouFeelingIcon/WhatAreYouFeelingIconScreen";
 
 
 
@@ -41,10 +43,8 @@ export default function ExplorerPage() {
       <Text style={styles.MotivationalQuote}>Motivational Quote</Text> 
       <GeneralWellnessGroups/>
       <View style={styles.IconsForBar}>
-      <Link  href="/YourFriends/YourFriendsScreen">
-      <Icon size={40} name="user"></Icon>
-      </Link>
-      <Icon name="plus" size={40}></Icon>
+      <YourFriendsIcon/>
+      <WhatAreYouFeelingIconScreen/>
       <Icon name="handshake" size={40}></Icon>
       </View>
     </View>
