@@ -39,8 +39,8 @@ export default function SearchBarComponent() {
 
 const styles = StyleSheet.create({
 view: {
-  margin: 10,
-
+  width: 316,
+  marginTop: 65,
 },
 
 });

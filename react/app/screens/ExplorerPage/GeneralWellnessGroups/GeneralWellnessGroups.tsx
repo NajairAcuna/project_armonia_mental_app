@@ -22,14 +22,13 @@ export default function GeneralWellnessGroups() {
         alignItems: 'center',
         justifyContent: 'flex-start',
       }}>
-       <View style={{width: 250, height: 150, backgroundColor: '#ddd', padding: 10}}>
+       <View style={{width: 250, height: 150, backgroundColor: '#ddd', padding: 10, marginTop: 90, borderWidth: 5}}>
         <Link href="/screens/YourWellnessGroups/YourWellnessGroupsScreen">
        <Text style={{textAlign: 'right'}}>about: hello, this group is open up about....</Text>
        <Text style={{textAlign: 'right'}}>(Group Name)</Text>
        </Link>
         </View>
-        <Separator/>     
-        <View style={{width: 250, height: 150, backgroundColor: '#ddd', padding: 10}}>
+        <View style={{width: 250, height: 150, backgroundColor: '#ddd', padding: 10, marginTop: 50, borderWidth: 5}}>
        <Text style={{textAlign: 'right',}}>about: hello, this group is open up about....</Text>
        <Text style={{textAlign: 'right',}}>(Group Name)</Text>
         </View>
@@ -49,8 +48,11 @@ const styles = StyleSheet.create({
     container: {
       flex: 1,
       padding: 20,
+      marginTop: 100
     },
     groupText: {
       flex: 5,
     },
+    view: {
+    }
   });

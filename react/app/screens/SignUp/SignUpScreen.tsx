@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Button,
   Image,
@@ -8,7 +8,7 @@ import {
   SafeAreaView,
   TextInput,
 } from "react-native";
-import { Link } from "expo-router";
+import { Link, useNavigation } from "expo-router";
 
 import { HelloWave } from "@/components/HelloWave";
 import ParallaxScrollView from "@/components/ParallaxScrollView";
@@ -19,6 +19,13 @@ export default function SignUpScreen() {
   const [text, putUser] = React.useState("User ID:");
   const [text2, putEmail] = React.useState("Email:");
   const [text3, putPassword] = React.useState("Password:");
+
+    const navigation = useNavigation();
+
+  useEffect(() => {
+    navigation.setOptions({headerShown: false});
+
+  }, [navigation]);
 
   return (
     <SafeAreaView style={styles.create}>
@@ -51,6 +58,7 @@ const styles = StyleSheet.create({
     flex: 5,
     padding: 20,
     backgroundColor: "#eaeaea",
+    marginBottom: 60
   },
   title: {
     textAlign: "center",

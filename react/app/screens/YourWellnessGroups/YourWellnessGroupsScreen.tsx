@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import {
   Button,
   Image,
@@ -10,8 +10,15 @@ import {
   TouchableOpacity,
   SwitchComponent,
 } from "react-native";
+import { useNavigation } from "expo-router";
 
 export default function WellnessGroups() {
+  const navigation = useNavigation();
+
+  useEffect(() => {
+    navigation.setOptions({headerShown: false});
+
+  }, [navigation]);
   return (
     <View>
       <Text style={{fontSize: 35, alignSelf: "center",}}>(group name)</Text>

@@ -58,7 +58,8 @@ const styles = StyleSheet.create({
     },
     openButton: {
         height: 40,
-        marginHorizontal: 10
+        overflow: 'hidden',
+        
     },
     modalContainer: {
         flex: 1,
