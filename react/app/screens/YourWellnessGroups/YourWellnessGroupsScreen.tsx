@@ -30,9 +30,9 @@ export default function WellnessGroups() {
       <Text style={{top: 70, fontSize: 20, right: -10}}> Hello, this group is to open up about depression and try to help deal with hope to see you in here.</Text>
       <Text style={{alignSelf: "center", top: 140, fontSize: 25, left: -90, borderWidth: 2, paddingTop: 5, paddingBottom: 5, paddingLeft: 30, paddingRight: 30  }}>Join</Text>
       <Text style={{alignSelf: "center", top: 96, fontSize: 25, left: 90, borderWidth: 2, paddingTop: 5, paddingBottom: 5, paddingLeft: 30, paddingRight: 30  }}>Request</Text>
-      <View>
+      <View style={styles.BackButton}>
       <Link href={"../ExplorerPage/ExplorerPageScreen"}>
-      <Icon name='arrow-left' size={50}></Icon>
+      <Icon name='arrow-left' size={90}></Icon>
       </Link>
       </View>
     </View>
@@ -41,7 +41,7 @@ export default function WellnessGroups() {
 
 const styles = StyleSheet.create({
   BackButton: {
-      borderWidth: 5, borderRadius: 30, alignSelf: 'flex-start', 
+      borderWidth: 5, borderRadius: 60, alignSelf: 'flex-start', top: 400 
   }
 });
 
