@@ -21,6 +21,7 @@ import { Link, useNavigation } from "expo-router";
 import YourFriends from "../YourFriends/YourFriendsScreen";
 import YourFriendsIcon from "./YourFriendsIcon/YourFriendsIconScreen";
 import WhatAreYouFeelingIconScreen from "./WhatAreYouFeelingIcon/WhatAreYouFeelingIconScreen";
+import GroupListsIcon from "./GroupsListsIcon/GroupsListsIconScreen";
 
 
 
@@ -45,7 +46,7 @@ export default function ExplorerPage() {
       <View style={styles.IconsForBar}>
       <YourFriendsIcon/>
       <WhatAreYouFeelingIconScreen/>
-      <Icon name="handshake" size={40}></Icon>
+      <GroupListsIcon/>
       </View>
     </View>
   );

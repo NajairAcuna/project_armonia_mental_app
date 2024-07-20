@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+
 import {
   Button,
   Image,
@@ -10,7 +11,9 @@ import {
   TouchableOpacity,
   SwitchComponent,
 } from "react-native";
-import { useNavigation } from "expo-router";
+import {Link, useNavigation } from "expo-router";
+import Icon from 'react-native-vector-icons/FontAwesome5';
+
 
 export default function WellnessGroups() {
   const navigation = useNavigation();
@@ -27,7 +30,18 @@ export default function WellnessGroups() {
       <Text style={{top: 70, fontSize: 20, right: -10}}> Hello, this group is to open up about depression and try to help deal with hope to see you in here.</Text>
       <Text style={{alignSelf: "center", top: 140, fontSize: 25, left: -90, borderWidth: 2, paddingTop: 5, paddingBottom: 5, paddingLeft: 30, paddingRight: 30  }}>Join</Text>
       <Text style={{alignSelf: "center", top: 96, fontSize: 25, left: 90, borderWidth: 2, paddingTop: 5, paddingBottom: 5, paddingLeft: 30, paddingRight: 30  }}>Request</Text>
+      <View>
+      <Link href={"../ExplorerPage/ExplorerPageScreen"}>
+      <Icon name='arrow-left' size={50}></Icon>
+      </Link>
+      </View>
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  BackButton: {
+      borderWidth: 5, borderRadius: 30, alignSelf: 'flex-start', 
+  }
+});
 

@@ -15,6 +15,8 @@ import {
   ViewStyle,
   Pressable,
 } from "react-native";
+import Icon from 'react-native-vector-icons/FontAwesome5';
+
 
 export default function GeneralWellnessGroups() {
     return(
@@ -33,6 +35,7 @@ export default function GeneralWellnessGroups() {
        <Text style={{textAlign: 'right'}}>about: hello, this group is open up about....</Text>
        <Text style={{textAlign: 'right', top: 70}}>(Group Name)</Text>
         </View>
+
       </View>
     ) 
 }

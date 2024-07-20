@@ -19,6 +19,7 @@ export default function WhatAreYouFeelingIconScreen() {
             <Link href="../WhatAreYouFeeling/WhatAreYouFeelingScreen">
          <Icon name="plus" size={40}></Icon>
             </Link>
+            <View></View>
         </View>
     ) 
 }

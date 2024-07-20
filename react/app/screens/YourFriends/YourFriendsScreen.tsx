@@ -30,14 +30,19 @@ export default function YourFriends() {
           <Text style={{alignSelf: "center",top: 60, fontSize: 30, fontWeight: "bold"}}>Your Friends</Text>
           <Icon name="user" color={"black"} size={30} style={styles.IconFriends}></Icon>
           <Text style={styles.Friends}>(Friend's Name)</Text>
+          <View style={styles.BackButton}>
+          <Link href={"../ExplorerPage/ExplorerPageScreen"}>
+          <Icon name='arrow-left' size={90}></Icon>
+          </Link>
+          </View>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-view: {
-  
-},
+  BackButton: {
+    borderWidth: 5, borderRadius: 50, alignSelf: 'flex-start', top: 600
+  },
 Friends: {
   fontSize: 40,
   top: 60,
