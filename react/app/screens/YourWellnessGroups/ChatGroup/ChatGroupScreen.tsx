@@ -45,7 +45,12 @@ export default function ChatGroup() {
 
             </View>
             <View>
-                <TextInput style={styles.TextBox} onChangeText={onChangeText} value={text}/>
+                <TextInput          
+                style={styles.TextBox} 
+                onChangeText={onChangeText}
+                editable={true} 
+                multiline={true}
+                value={text}/>
             </View>
         </View>
     )
@@ -62,13 +67,12 @@ const styles = StyleSheet.create({
         borderWidth: 5, borderRadius: 60, alignSelf: 'flex-start', top: 400 
     },
     TextBox: {
-        height: 30,
         borderWidth: 1,
-        alignSelf: 'center',
-        paddingLeft: 160,
-        paddingRight: 90,
-        left: 40,
-        top: 100
-
+        borderColor: '#777',
+        padding: 10,
+        paddingStart: 3,
+        width: 250,
+        left: 100,
+        top: 115
         }
   });

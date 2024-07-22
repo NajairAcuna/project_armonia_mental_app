@@ -11,6 +11,8 @@ import {
   SwitchComponent,
 } from "react-native";
 import Icon from 'react-native-vector-icons/FontAwesome5';
+// import {AutoGrowingTextInput} from 'react-native-autogrow-textinput';
+
 import { Link,useNavigation } from "expo-router";
 
 export default function WhatAreYouFeeling() {
@@ -32,10 +34,17 @@ export default function WhatAreYouFeeling() {
         <Icon name='arrow-left' size={90}></Icon>
         </Link>
         </View>
-        <View>
-          <SafeAreaView>
-          <TextInput style={styles.TextBox} onChangeText={writeHowAreYouFeeling} value={text}/>
-          </SafeAreaView>
+        <View style={styles.container}>
+
+          <TextInput 
+          style={styles.TextBox} 
+          onChangeText={writeHowAreYouFeeling}
+          editable={true} 
+          multiline={true}
+          value={text}
+          
+          />
+
         </View>
       </View>
       
@@ -48,9 +57,17 @@ const styles = StyleSheet.create({
     borderWidth: 5, borderRadius: 60, alignSelf: 'flex-start', top: 560 
   },
   TextBox: {
-    height: 40,
-    margin: 12,
     borderWidth: 1,
-    padding: 10,
+    borderColor: '#777',
+    padding: 25,
+    paddingStart: 5,
+    margin: 10,
+    width: 350,
+    },
+    container: {
+      flex: 1,
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'center'
     }
 })
