@@ -20,6 +20,8 @@ export default function WhatAreYouFeeling() {
       navigation.setOptions({headerShown: false});
   
     }, [navigation]);
+
+    const [text, writeHowAreYouFeeling] = React.useState('');
     
     return(
       <View>
@@ -30,6 +32,11 @@ export default function WhatAreYouFeeling() {
         <Icon name='arrow-left' size={90}></Icon>
         </Link>
         </View>
+        <View>
+          <SafeAreaView>
+          <TextInput style={styles.TextBox} onChangeText={writeHowAreYouFeeling} value={text}/>
+          </SafeAreaView>
+        </View>
       </View>
       
     )
@@ -39,5 +46,11 @@ export default function WhatAreYouFeeling() {
 const styles = StyleSheet.create({
   BackButton: {
     borderWidth: 5, borderRadius: 60, alignSelf: 'flex-start', top: 560 
-  }
+  },
+  TextBox: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+    }
 })
