@@ -34,8 +34,7 @@ export default function WhatAreYouFeeling() {
         <Icon name='arrow-left' size={90}></Icon>
         </Link>
         </View>
-        <View style={styles.container}>
-
+        <View>
           <TextInput 
           style={styles.TextBox} 
           onChangeText={writeHowAreYouFeeling}
@@ -59,15 +58,9 @@ const styles = StyleSheet.create({
   TextBox: {
     borderWidth: 1,
     borderColor: '#777',
-    padding: 25,
-    paddingStart: 5,
-    margin: 10,
-    width: 350,
+    padding: 5,
+    paddingStart: 3,
+    width: 250,
+    alignSelf: 'center',
     },
-    container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center'
-    }
 })
