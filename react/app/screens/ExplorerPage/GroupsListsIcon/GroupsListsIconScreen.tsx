@@ -17,7 +17,7 @@ export default function GroupListsIcon() {
     return(
         <View>
             <Link href={"../GroupLists/GroupListsScreen"}>
-            <Icon name="handshake" size={40}></Icon>
+            <Icon name="handshake" size={40} style={{color: 'white'}}></Icon>
             </Link>
         </View>
     )

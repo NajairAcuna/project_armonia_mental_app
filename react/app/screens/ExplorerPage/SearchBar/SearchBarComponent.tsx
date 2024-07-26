@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { SearchBar } from '@rneui/themed';
+import { SearchBar, withTheme } from '@rneui/themed';
 import {
   Button,
   Image,
@@ -30,8 +30,12 @@ export default function SearchBarComponent() {
           onChangeText={updateSearch}
           value={search}
           platform="default"
-          lightTheme={true}
           round={true}
+          // lightTheme={true}
+          inputContainerStyle={{backgroundColor: 'white'}}
+          containerStyle={{backgroundColor: '#065064'}}
+          // inputStyle={{backgroundColor: 'white', color: 'black',}}
+          underlineColorAndroid={"blue"}
         />
       </View>
     );
@@ -39,8 +43,9 @@ export default function SearchBarComponent() {
 
 const styles = StyleSheet.create({
 view: {
-  width: 315,
-  top: 45
+  width: 295,
+  top: 52,
+  
 },
 
 });

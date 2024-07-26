@@ -16,6 +16,7 @@ import {
   Pressable,
 } from "react-native";
 import Icon from 'react-native-vector-icons/FontAwesome5';
+ 
 
 
 export default function GeneralWellnessGroups() {
@@ -24,17 +25,29 @@ export default function GeneralWellnessGroups() {
         alignItems: 'center',
         justifyContent: 'flex-start',
       }}>
-       <View style={{width: 250, height: 150, backgroundColor: '#ddd', padding: 10, marginTop: 90, borderWidth: 5}}>
-        <Link href="/screens/YourWellnessGroups/YourWellnessGroupsScreen">
-       <Text style={{textAlign: 'right'}}>about: hello, this group is open up about....</Text>
-       </Link>
-       <Text style={{textAlign: 'right', top: 70}}>(Group Name)</Text>
-       
+       <View style={{width: 350, height: 200, backgroundColor: '#F2F2F2'
+        , padding: 10, top: -20, borderWidth: 5, borderColor: "#F2F2F2",  borderRadius: 35}}>
+        <Link href="/screens/YourWellnessGroups/YourWellnessGroupsScreen" style={{}}>
+        <Text style={{top: 10, left: 40, fontSize: 20, fontWeight: 'bold', textAlign: 'right'}}>Alcoholic {"\n"} Anonymous {"\n"}</Text>
+        <Text style={{ fontSize: 20, textAlign: 'right'}}>
+        For {"\n"} struggling {"\n"} alcoholics
+        </Text>
+        </Link>
+       <Image style={{height: 170, width: 170, top: -120, left: 20, backgroundColor: '#dedede', borderRadius: 20}} source={{uri: "https://i.postimg.cc/7L9cnR56/Pasted-Graphic-2.png"}}/>
         </View>
-        <View style={{width: 250, height: 150, backgroundColor: '#ddd', padding: 10, marginTop: 50, borderWidth: 5}}>
-       <Text style={{textAlign: 'right'}}>about: hello, this group is open up about....</Text>
-       <Text style={{textAlign: 'right', top: 70}}>(Group Name)</Text>
+        
+        <View style={{width: 350, height: 200, backgroundColor: '#F2F2F2', padding: 10, marginTop: 5, borderWidth: 5, borderColor: "#F2F2F2", borderRadius: 35}}>
+        <Text style={{top: 0, left:-50, fontSize: 20, fontWeight: 'bold', textAlign: 'right'}}>Gymming {"\n"}</Text>
+        <Text style={{textAlign: 'right',  fontSize: 20}}>Deal with {"\n"} your emotions in {"\n"} a positive way</Text>
+        <Image style={{height: 160, width: 160, top: -110, left: -0, borderRadius: 20}} source={{uri: "https://i.postimg.cc/KzXKQ0w6/ff8b2f16dcb5f23231bc7166e143a328.jpg"}}/>
         </View>
+
+        <View style={{width: 350, height: 200, backgroundColor: '#F2F2F2', padding: 10, marginTop: 25, borderWidth: 5, borderColor: "#F2F2F2",  borderRadius: 35}}>
+        <Text style={{top: 0, left: -50, fontSize: 20, fontWeight: 'bold', textAlign:"right"}}>Broken Trust {"\n"}</Text>
+        <Text style={{textAlign: 'right',  fontSize: 20}}>Cheated on? {"\n"}  Friend hurt you? {"\n"} Join here</Text>
+        <Image style={{height: 135, width: 135, top: -120, left: 10, borderRadius: 20}} source={{uri: "https://i.postimg.cc/4NR5n53F/9a09e5cafa643f6ec7b38c63766d5bf4.jpg"}}/>
+        </View>
+        
 
       </View>
     ) 
@@ -46,17 +59,19 @@ const separatorStyles: ViewStyle = {
   backgroundColor: '#FFFFFF',
 }
 
-const Separator = () => <View style={separatorStyles}/>;
 
 const styles = StyleSheet.create({
     container: {
       flex: 1,
       padding: 20,
-      marginTop: 100
     },
     groupText: {
       flex: 5,
     },
     view: {
+    },
+    ImageGroup: {
+      width: 90,
+      height: 80
     }
   });

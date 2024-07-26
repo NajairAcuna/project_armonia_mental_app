@@ -22,6 +22,12 @@ import YourFriends from "../YourFriends/YourFriendsScreen";
 import YourFriendsIcon from "./YourFriendsIcon/YourFriendsIconScreen";
 import WhatAreYouFeelingIconScreen from "./WhatAreYouFeelingIcon/WhatAreYouFeelingIconScreen";
 import GroupListsIcon from "./GroupsListsIcon/GroupsListsIconScreen";
+import { color } from "@rneui/base";
+import { blue } from "react-native-reanimated/lib/typescript/reanimated2/Colors";
+// import { Animated } from "react-native";
+import {LinearGradient} from 'expo-linear-gradient';
+
+
 
 
 
@@ -33,15 +39,17 @@ export default function ExplorerPage() {
     navigation.setOptions({headerShown: false});
 
   }, [navigation]);
-
+  // const AnimatedLinearGradient = Animated.createAnimatedComponent(LinearGradient);
   return (
-    <View>
+
+    <View  style={{backgroundColor:"white", paddingBottom: 540}}>
+
       <View style={styles.Container2}>
         <SearchBarComponent/>
         <ProfilePopUp/>
       </View>
-
-      <Text style={styles.MotivationalQuote}>Motivational Quote</Text> 
+   
+      <Text style={styles.MotivationalQuote}>"Have laughable dreams!"</Text> 
       <GeneralWellnessGroups/>
       <View style={styles.IconsForBar}>
       <YourFriendsIcon/>
@@ -49,6 +57,7 @@ export default function ExplorerPage() {
       <GroupListsIcon/>
       </View>
     </View>
+  
   );
   };
 
@@ -58,23 +67,34 @@ view: {
   
 },
 IconsForBar: {
-  top: 670,
+  top: 580,
  justifyContent: "space-evenly",
- left: 10,
+ left: 1,
  flexDirection: "row",
+ backgroundColor: "#065064",
+ paddingBottom: 80,
+ borderWidth: 4,
+ borderColor: "#065064"
 },
 MotivationalQuote: {
   textAlign: 'center',
-  fontWeight: 'bold',
-  fontSize: 30,
-  top: 70
-
+  fontFamily: 'AveriaSerif-Light',
+  fontSize: 25,
+  top: -50,
+  color: 'white'
 },
 Container2: { 
   flex: -1,
   flexDirection: "row",
-  display: "flex",
-  justifyContent: "space-evenly"
-  // backgroundColor: "#00e30b"
-}
+  justifyContent: "space-evenly",
+  backgroundColor: "#065064",
+  paddingBottom: 100,
+  paddingLeft: 25,
+  paddingRight: 26,
+  borderWidth: 4,
+  borderColor: "#065064"
+},
+Gradient: {
+  alignItems: 'center',
+  justifyContent: 'center',},
 });

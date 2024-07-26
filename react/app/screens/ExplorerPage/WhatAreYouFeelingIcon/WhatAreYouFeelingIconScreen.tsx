@@ -15,9 +15,9 @@ import Icon from "react-native-vector-icons/FontAwesome";
 
 export default function WhatAreYouFeelingIconScreen() {
     return(
-        <View>
+        <View style={{backgroundColor: "#67e26d", borderWidth: 10, borderColor: '#67e26d', borderRadius: 360, top: 5}}>
             <Link href="../WhatAreYouFeeling/WhatAreYouFeelingScreen">
-         <Icon name="plus" size={40}></Icon>
+         <Icon name="plus" size={20} ></Icon>
             </Link>
             <View></View>
         </View>

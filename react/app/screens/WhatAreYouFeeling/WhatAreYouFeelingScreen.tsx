@@ -31,7 +31,7 @@ export default function WhatAreYouFeeling() {
         <Text style={{textAlign: "center", fontSize: 20, top: 55}}>use as much detail as possible to describe what are you feeling and what is causing it</Text>
         <View style={styles.BackButton}>
         <Link href={"../ExplorerPage/ExplorerPageScreen"}>
-        <Icon name='arrow-left' size={90}></Icon>
+        <Text style={{fontSize: 40}}>Finish?</Text>
         </Link>
         </View>
         <View>
@@ -53,7 +53,7 @@ export default function WhatAreYouFeeling() {
 
 const styles = StyleSheet.create({
   BackButton: {
-    borderWidth: 5, borderRadius: 60, alignSelf: 'flex-start', top: 560 
+    borderWidth: 2, borderRadius: 10, alignSelf: 'flex-start', top: 560 
   },
   TextBox: {
     borderWidth: 1,
@@ -62,5 +62,6 @@ const styles = StyleSheet.create({
     paddingStart: 3,
     width: 250,
     alignSelf: 'center',
+    top: 50
     },
 })

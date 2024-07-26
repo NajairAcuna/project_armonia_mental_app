@@ -9,6 +9,7 @@ import {
   TextInput,
 } from "react-native";
 import { Link, useNavigation } from "expo-router";
+import {LinearGradient} from "react-native-linear-gradient";
 
 import { HelloWave } from "@/components/HelloWave";
 import ParallaxScrollView from "@/components/ParallaxScrollView";
@@ -29,6 +30,11 @@ export default function SignUpScreen() {
 
   return (
     <SafeAreaView style={styles.create}>
+      <View>
+      {/* <Image style={styles.LogoYuda} source={require('/react/assets/images/Yudalogo')}/> */}
+      </View>
+      {/* <Image style={styles.LogoYuda} source={require('../images/Yudalogo.png')}/> */}
+            {/* <LinearGradient colors={['rgba(255, 255, 255, 0)', 'rgba(255, 255, 255, 1)']} style={styles.linearGradient}> */}
       <TextInput
         style={styles.textInputs}
         onChangeText={putUser}
@@ -49,6 +55,7 @@ export default function SignUpScreen() {
           Sign Up
         </Text>
       </Link>
+      {/* </LinearGradient> */}
     </SafeAreaView>
   );
 }
@@ -80,4 +87,14 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 10,
   },
+  linearGradient: {
+    flex: 1,
+    paddingLeft: 15,
+    paddingRight: 15,
+    borderRadius: 5
+  },
+  LogoYuda: {
+    width: 66,
+    height: 58,
+  }
 });
