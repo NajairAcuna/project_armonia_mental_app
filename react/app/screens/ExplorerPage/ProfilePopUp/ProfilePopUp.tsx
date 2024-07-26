@@ -13,7 +13,7 @@ import {
   TouchableOpacity,
   SwitchComponent,
 } from "react-native";
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 import Svg, { Circle } from 'react-native-svg';
 
 
@@ -34,25 +34,34 @@ export default function ProfilePopUp (){
          <Image style={styles.openButton}  source={{uri:"https://i.postimg.cc/tRdpRdVr/1273655-squarerootofdestiny-whirl-icon-commission.jpg"}} onProgress={openModal}/>
          </TouchableOpacity>
          <Modal
-         animationType="slide"
+         animationType="fade"
          transparent={true}
          visible={modalVisible}
          onRequestClose={closeModal}>
          <View style={styles.modalContainer}>
             <View style={styles.modalContent}>
-                <Text style={{color:"#13aa5f", top: 10}}>Profile: Name Rod Magnus</Text>
-                <Text style={{color:"#13aa5f", top: 75}}>About me: </Text>
-                <Text style={{color:"#13aa5f", top: 80}}> Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</Text>
-                <Icon style={{color:"#13aa5f", top: 145, left: 90}} name="tree" size={40}></Icon>
+                <Text style={{color:"white", top: 10}}>Profile: Name Rod Magnus</Text>
+                <Text style={{color:"white", top: 75}}>About me: </Text>
+                <Text style={{color:"white", top: 80}}> Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</Text>
+                <Icon style={{color:"#38D085", top: 180, left: 80}} name="tree" size={40}></Icon>
+                <Icon style={{color:"#38D085", top: 140}}name="pencil-alt" size={35}></Icon>
              <TouchableOpacity style={styles.closeButton} onPress={closeModal}>
-             <Text style={styles.modalText}>X</Text>
+             <Text style={styles.modalText}>Log out</Text>
              </TouchableOpacity>
             </View>
+          {/* <View style={{borderWidth: 1, top: 150,backgroundColor: "#026471", paddingBottom: -10, borderColor: "#026471", paddingHorizontal: 200, alignContent:'center'}}>
+            <Icon name="user-friends" size={50} color={'white'} style={{width: 65, height: 65, right: 150}}></Icon>
+            <Icon name="home" size={50} color={'white'} style={{width: 65, height: 65, top: -80}}></Icon>
+            <Icon name="book" size={50} color={'white'} style={{width: 65, height: 65}}></Icon>
+          </View> */}
           </View>
          </Modal>
         </View>
+        
+
     );
 }
+
 
 
 const styles = StyleSheet.create({
@@ -61,6 +70,13 @@ const styles = StyleSheet.create({
         // justifyContent: 'center',
        
     },
+    absolute: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        bottom: 0,
+        right: 0,
+      },
     openButton: {
         flex: -1,
         alignSelf: "center",
@@ -68,7 +84,7 @@ const styles = StyleSheet.create({
         left: 10,
         height: 45,
         width: 45,
-        borderRadius: 22
+        borderRadius: 30
     },
     modalContainer: {
         flex: 1,
@@ -76,16 +92,22 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     modalContent: {
-        backgroundColor: '#065064',
+        backgroundColor: '#13A95F',
         padding: 20,
-        borderRadius: 8,
+        borderWidth: 5,
+        borderColor: '#38D085',
+        borderRadius: 10,
         width: '80%'
     },
     modalText: {
         fontSize: 40,
         marginLeft: 10,
         marginBottom: 10,
-        color: "red"
+        color: "white",
+        borderWidth: 1,
+        borderRadius: 20, 
+        borderColor: "red",
+        backgroundColor: 'red'
     },
     closeButton: {
         marginTop: 100,
@@ -94,6 +116,9 @@ const styles = StyleSheet.create({
     closeButtonText: {
         color: 'black',
         fontWeight: 'bold',
-    }
+    },
+    IconsForPopUp: {
+        borderWidth: 1, top: -125, left: 0,backgroundColor: "#026471", paddingBottom: 70, borderColor: "#026471",
+        },
 });
 

@@ -26,6 +26,8 @@ import { color } from "@rneui/base";
 import { blue } from "react-native-reanimated/lib/typescript/reanimated2/Colors";
 // import { Animated } from "react-native";
 import {LinearGradient} from 'expo-linear-gradient';
+import HomeIcon from "./HomeIcon/HomeScreenIcon";
+import HomeIconButton from "./HomeIcon/HomeScreenIcon";
 
 
 
@@ -53,6 +55,7 @@ export default function ExplorerPage() {
       <GeneralWellnessGroups/>
       <View style={styles.IconsForBar}>
       <YourFriendsIcon/>
+      <HomeIcon/>
       <WhatAreYouFeelingIconScreen/>
       <GroupListsIcon/>
       </View>

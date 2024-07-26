@@ -13,6 +13,10 @@ import {
 import {Link, useNavigation } from "expo-router";
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import svg, { Circle } from 'react-native-svg';
+import GroupListsIcon from "../../ExplorerPage/GroupsListsIcon/GroupsListsIconScreen";
+import HomeIcon from "../../ExplorerPage/HomeIcon/HomeScreenIcon";
+import WhatAreYouFeelingIconScreen from "../../ExplorerPage/WhatAreYouFeelingIcon/WhatAreYouFeelingIconScreen";
+import YourFriendsIcon from "../../ExplorerPage/YourFriendsIcon/YourFriendsIconScreen";
 
 export default function ChatGroup() {
 
@@ -60,9 +64,10 @@ export default function ChatGroup() {
              <Text style={{left: 160, top: -670}}>Blah blah blah blah  blah  blah blah</Text>
             </View>
             <View style={styles.BackButton}>
-            <Link href="../YourWellnessGroupsScreen">
-            <Icon name='arrow-left' size={60}></Icon>
-            </Link>
+            <YourFriendsIcon/>
+             <HomeIcon/>
+            <WhatAreYouFeelingIconScreen/>
+            <GroupListsIcon/>
             </View>
         </View>
     )
@@ -76,7 +81,14 @@ const styles = StyleSheet.create({
         left: 7,
     },
     BackButton: {
-        borderWidth: 5, borderRadius: 60, alignSelf: 'center', top: -260, right: 160
+        top: 10,
+        justifyContent: "space-evenly",
+        left: 0,
+        flexDirection: "row",
+        backgroundColor: "#065064",
+        paddingBottom: 20,
+        borderWidth: 8,
+        borderColor: "#065064"
     },
     TextBox: {
         borderWidth: 1,

@@ -29,7 +29,7 @@ export default function YourFriendsIcon() {
     return(
         <View>
             <Link href="../YourFriends/YourFriendsScreen">
-          <Icon size={40} name="user" style={{color: 'white', top: 5}}></Icon>
+          <Icon size={40} name="user" style={{color: "#13A95F", top: 5}}></Icon>
             </Link>
         </View>
     )
