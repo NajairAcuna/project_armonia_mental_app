@@ -65,14 +65,14 @@ const styles = StyleSheet.create({
   },
   TextBox: {
     borderWidth: 1,
-    borderColor: '#065064',
-    padding: 5,
+    borderColor: 'white',
     paddingStart: 3,
     width: 250,
     alignSelf: 'center',
     top: 35,
     backgroundColor: "#065064",
     color: 'white',
+    paddingBottom: 30
     },
     IconsSpaceBar: {
         top: 535,

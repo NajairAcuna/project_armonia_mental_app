@@ -44,7 +44,7 @@ export default function WellnessGroups() {
       >
         {titleText}
       </Text>
-      <Text style={{ fontSize: 35, top: 55, left: 105, color: "white" }}>
+      <Text style={{ fontSize: 35, top: 55, left: 105, color: "black" }}>
         Members: {memberNumber}
       </Text>
       <Text
@@ -53,12 +53,12 @@ export default function WellnessGroups() {
           top: 70,
           fontWeight: "bold",
           left: 10,
-          color: "white",
+          color: "black",
         }}
       >
         About:
       </Text>
-      <Text style={{ top: 70, fontSize: 20, right: -10, color: "white" }}>
+      <Text style={{ top: 70, fontSize: 20, right: -10, color: "black" }}>
         {aboutText}
       </Text>
       <View
@@ -72,7 +72,9 @@ export default function WellnessGroups() {
           paddingLeft: 30,
           paddingRight: 30,
           width: 120,
-          backgroundColor: "#017260",
+          backgroundColor: "#34C985",
+          borderRadius: 200,
+          borderColor: "#1B9E73"
         }}
       >
         <Link href="../YourWellnessGroups/ChatGroup/ChatGroupScreen">
@@ -82,12 +84,15 @@ export default function WellnessGroups() {
               top: 140,
               fontSize: 25,
               left: -90,
-              borderWidth: 2,
+              borderWidth: 3,
               paddingTop: 5,
               paddingBottom: 5,
               paddingLeft: 30,
               paddingRight: 30,
-              backgroundColor: "#017260",
+              borderColor: '#34C985',
+              backgroundColor: "#34C985",
+              borderRadius: 10,
+              color: "#1B9E73"
             }}
           >
             Join

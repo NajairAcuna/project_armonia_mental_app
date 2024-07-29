@@ -15,6 +15,7 @@ import {
 } from "react-native";
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import Svg, { Circle } from 'react-native-svg';
+import { Link } from "expo-router";
 
 
 export default function ProfilePopUp (){
@@ -40,13 +41,18 @@ export default function ProfilePopUp (){
          onRequestClose={closeModal}>
          <View style={styles.modalContainer}>
             <View style={styles.modalContent}>
-                <Text style={{color:"white", top: 10}}>Profile: Name Rod Magnus</Text>
+                <Text style={{color:"white", top: 10}}>Name: Whirl C. Milne</Text>
+                <Text style={{color:"white", top: 65}}>Trees: 2 </Text>
                 <Text style={{color:"white", top: 75}}>About me: </Text>
-                <Text style={{color:"white", top: 80}}> Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</Text>
-                <Icon style={{color:"#38D085", top: 180, left: 80}} name="tree" size={40}></Icon>
-                <Icon style={{color:"#38D085", top: 140}}name="pencil-alt" size={35}></Icon>
+                <Text style={{color:"white", top: 80}}>Hi, my name is Willy!</Text>
+                <Icon style={{color:"#38D085", top: 180, left: 20}} name="tree" size={40}></Icon>
+                <Icon style={{color:"#38D085", top: -120, left: 230}}name="pencil-alt" size={35}></Icon>
              <TouchableOpacity style={styles.closeButton} onPress={closeModal}>
-             <Text style={styles.modalText}>Log out</Text>
+
+             <Text style={styles.modalText}>
+                Log out
+                </Text>
+
              </TouchableOpacity>
             </View>
           {/* <View style={{borderWidth: 1, top: 150,backgroundColor: "#026471", paddingBottom: -10, borderColor: "#026471", paddingHorizontal: 200, alignContent:'center'}}>
