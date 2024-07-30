@@ -45,7 +45,7 @@ import {
          <GroupListsIcon/>
         </View>
         
-        <View style={{backgroundColor: "#0CBEA2", top: -25,width: '100%', height: "383%"}}>
+        <View style={{backgroundColor: "#30B18A", top: -25,width: '100%', height: "383%"}}>
         <Text style={{fontSize: 35, top: 450, textAlign: 'center', color: '#065064', fontWeight: 'bold'}}>Bonsai tree</Text>
         <Text style={{fontSize: 20,top: 470, textAlign: 'center', fontWeight: 'bold', color: '#065064'}}>Number of days:</Text>
         <Text style={{textAlign: 'center', top: 485, fontSize: 20, color: '#065064', fontWeight: 'bold'}}>0-4</Text>

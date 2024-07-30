@@ -30,7 +30,8 @@ export default function WellnessGroups() {
     navigation.setOptions({ headerShown: false });
   }, [navigation]);
   return (
-    <View style={{ backgroundColor: "#065064", paddingBottom: 600 }}>
+    <View style={{ backgroundColor: "white", paddingBottom: 600 }}>
+      <View style={{backgroundColor: "#065064", width: "100%", height: "20%"}} ></View>
       <Text
         style={{
           top: 49,
@@ -44,7 +45,7 @@ export default function WellnessGroups() {
       >
         {titleText}
       </Text>
-      <Text style={{ fontSize: 35, top: 55, left: 105, color: "black" }}>
+      <Text style={{ fontSize: 35, top: 50, left: 105, color: "black" }}>
         Members: {memberNumber}
       </Text>
       <Text
@@ -64,8 +65,7 @@ export default function WellnessGroups() {
       <View
         style={{
           alignSelf: "center",
-          top: 96,
-          left: 90,
+          top: 250,
           borderWidth: 2,
           paddingTop: 5,
           paddingBottom: 5,
@@ -77,7 +77,8 @@ export default function WellnessGroups() {
           borderColor: "#1B9E73"
         }}
       >
-        <Link href="../YourWellnessGroups/ChatGroup/ChatGroupScreen">
+        
+        <Link href="../GroupLists/GroupListsScreen">
           <Text
             style={{
               alignSelf: "center",
@@ -99,10 +100,14 @@ export default function WellnessGroups() {
           </Text>
         </Link>
       </View>
+      <View style={{backgroundColor: "#065064", width: "100%", height: "80%", top: 299 }}>
+
       <View style={styles.BackButton}>
+
         <Link href={"../ExplorerPage/ExplorerPageScreen"}>
-          <Icon name="arrow-left" size={90} color={"#003855"}></Icon>
+          <Icon name="arrow-left" size={80} color={"#003855"}></Icon>
         </Link>
+      </View>
       </View>
     </View>
   );
@@ -113,8 +118,9 @@ const styles = StyleSheet.create({
     borderWidth: 0,
     borderRadius: 60,
     alignSelf: "flex-start",
-    top: 400,
+    top:10,
     color: "#003855",
+    left: 20
   },
   Gradient: {},
 });
