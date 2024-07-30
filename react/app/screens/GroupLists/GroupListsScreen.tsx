@@ -97,11 +97,13 @@ export default function GroupLists() {
             uri: "https://i.postimg.cc/4NR5n53F/9a09e5cafa643f6ec7b38c63766d5bf4.jpg",
           }}
         />
-        <Icon name="plus" size={40} style={{color:"#30B18A",left: 15, top: 85, backgroundColor: '#3EFFC5', alignSelf: "center", borderWidth: 1, borderRadius: 14, }}></Icon>
+        <Link style={{color:"#30B18A",left: 15, top: 85, backgroundColor: '#3EFFC5', alignSelf: "center", borderWidth: 1, borderRadius: 20, }} href={'../GroupLists/CreateGroup/CreateGroupScreen'}>
+        <Icon name="plus" size={50} ></Icon>
+        </Link>
       </View>
       <View style={{}}>
         <TextInput style={{height: 45, borderWidth: 1, top: -880, width: 220, left: 100, borderRadius: 25}} onChangeText={onChangeText} value={text}></TextInput>
-        <Icon name="plus" size={25} style={{top: -916, left: 340}}></Icon>
+        <Icon name="plus" size={25} style={{top: -916, left: 340, borderRadius: 10}}></Icon>
       </View>
       <View>
         <Text style={{left: 115,top: -870, fontSize: 20, color: 'grey',}}>chat</Text>
@@ -124,7 +126,7 @@ const styles = StyleSheet.create({
   IconsForChat: {
     borderWidth: 1,
     top: -145,
-    left: 0,
+    left: 1,
     backgroundColor: "#026471",
     paddingBottom: 70,
     borderColor: "#026471",

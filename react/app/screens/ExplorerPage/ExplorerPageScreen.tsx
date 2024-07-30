@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, Component } from "react"
 import { SearchBar } from '@rneui/themed';
 import {
   Alert,
@@ -12,6 +12,7 @@ import {
   TextInput,
   TouchableOpacity,
   SwitchComponent,
+  ScrollView
 } from "react-native";
 import SearchBarComponent from "./SearchBar/SearchBarComponent";
 import GeneralWellnessGroups from "./GeneralWellnessGroups/GeneralWellnessGroups";
@@ -28,6 +29,7 @@ import { blue } from "react-native-reanimated/lib/typescript/reanimated2/Colors"
 import {LinearGradient} from 'expo-linear-gradient';
 import HomeIcon from "./HomeIcon/HomeScreenIcon";
 import HomeIconButton from "./HomeIcon/HomeScreenIcon";
+import { FlatList } from "react-native-gesture-handler";
 
 
 
@@ -41,8 +43,15 @@ export default function ExplorerPage() {
     navigation.setOptions({headerShown: false});
 
   }, [navigation]);
+
+  const [modalVisible, setModalVisible] = useState(false);
+  const closeModal = () => {
+    setModalVisible(false);
+    
+};
   // const AnimatedLinearGradient = Animated.createAnimatedComponent(LinearGradient);
   return (
+    <ScrollView>
 
     <View  style={{backgroundColor:"white", paddingBottom: 540}}>
 
@@ -50,17 +59,22 @@ export default function ExplorerPage() {
         <SearchBarComponent/>
         <ProfilePopUp/>
       </View>
-   
+      
       <Text style={styles.MotivationalQuote}>"Have laughable dreams!"</Text> 
       <GeneralWellnessGroups/>
-      <View style={styles.IconsForBar}>
+
+
+    </View>
+    <View style={styles.IconsForBar}>
       <YourFriendsIcon/>
       <HomeIcon/>
       <WhatAreYouFeelingIconScreen/>
       <GroupListsIcon/>
       </View>
-    </View>
-  
+    </ScrollView>
+
+
+
   );
   };
 
@@ -70,12 +84,12 @@ view: {
   
 },
 IconsForBar: {
-  top: 580,
+  top: -5,
  justifyContent: "space-evenly",
- left: 1,
+ left: 0,
  flexDirection: "row",
  backgroundColor: "#065064",
- paddingBottom: 80,
+ paddingBottom: 40,
  borderWidth: 4,
  borderColor: "#065064"
 },

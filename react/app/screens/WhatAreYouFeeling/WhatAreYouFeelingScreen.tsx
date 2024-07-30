@@ -65,24 +65,24 @@ const styles = StyleSheet.create({
   },
   TextBox: {
     borderWidth: 1,
-    borderColor: 'white',
-    paddingStart: 3,
+    borderColor: 'black',
+    paddingStart: 0,
     width: 250,
     alignSelf: 'center',
-    top: 35,
-    backgroundColor: "#065064",
-    color: 'white',
-    paddingBottom: 30
+    top: 10,
+    backgroundColor: "white",
+    color: 'black',
+    paddingBottom: 70,
     },
     IconsSpaceBar: {
-        top: 535,
+        top: 500,
         justifyContent: "space-evenly",
         left: 0,
         flexDirection: "row",
         backgroundColor: "#065064",
         paddingBottom: 50,
         borderWidth: 8,
-        borderColor: "#2D8EA8",
+        borderColor: "#065064",
         paddingHorizontal: 20
     },
 })
