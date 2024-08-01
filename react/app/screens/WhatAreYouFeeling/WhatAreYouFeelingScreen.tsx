@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     paddingBottom: 70,
     },
     IconsSpaceBar: {
-      top: 280,
+      top: 335,
       justifyContent: "space-evenly",
       left: -30,
       flexDirection: "row",

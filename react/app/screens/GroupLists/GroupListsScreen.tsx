@@ -98,10 +98,11 @@ export default function GroupLists() {
             uri: "https://i.postimg.cc/4NR5n53F/9a09e5cafa643f6ec7b38c63766d5bf4.jpg",
           }}
         />
-        <Link style={{left: 30, top: 85 }} href={'../GroupLists/CreateGroup/CreateGroupScreen'}>
-        <Icon name="plus" size={50} style={{color:"#30B18A", backgroundColor: '#3EFFC5', borderWidth: 1}}></Icon>
+        <View style={{backgroundColor: '#3EFFC5', top: 80, left: 25, borderRadius: 10, height: 50, width: 50 }}>
+        <Link style={{left: 5, top: 3 }} href={'../GroupLists/CreateGroup/CreateGroupScreen'}>
+        <Icon name="plus" size={45} style={{color:"#30B18A", borderWidth: 1}}></Icon>
         </Link>
-
+        </View>
       </View>
       <View style={{}}>
         <TextInput style={{height: 45, borderWidth: 1, top: -880, width: 220, left: 100, borderRadius: 25}} onChangeText={onChangeText} value={text}></TextInput>

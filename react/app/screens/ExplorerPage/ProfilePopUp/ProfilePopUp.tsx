@@ -114,14 +114,13 @@ const styles = StyleSheet.create({
         width: '80%'
     },
     modalText: {
-        top: 0,
+        top: 5,
         fontSize: 25,
         color: "white",
-        borderWidth: -32,
         borderRadius: 20, 
         borderColor: "red",
         paddingTop: 1,
-        left: 20
+        left: 10
     },
     closeButton: {
         marginTop: 70,
