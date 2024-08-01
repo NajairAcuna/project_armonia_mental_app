@@ -16,8 +16,8 @@ import {
   import ProfilePopUp from "../ExplorerPage/ProfilePopUp/ProfilePopUp";
   import HomeIcon from "../ExplorerPage/HomeIcon/HomeScreenIcon";
   import YourFriendsIcon from "../ExplorerPage/YourFriendsIcon/YourFriendsIconScreen";
-  import GroupListsIcon from "../ExplorerPage/GroupsListsIcon/GroupsListsIconScreen";
   import WhatAreYouFeelingIconScreen from "../ExplorerPage/WhatAreYouFeelingIcon/WhatAreYouFeelingIconScreen";
+import GroupListsIcon from "../ExplorerPage/GroupsListsIcon/GroupsListsIconScreen";
 
   export default function TreeTime() {
 
@@ -42,7 +42,7 @@ import {
          <YourFriendsIcon/>
          <HomeIcon/>
          <WhatAreYouFeelingIconScreen/>
-         <GroupListsIcon/>
+          <GroupListsIcon/>
         </View>
         
         <View style={{backgroundColor: "#30B18A", top: -25,width: '100%', height: "383%"}}>

@@ -20,6 +20,7 @@ import GroupListsIcon from "../ExplorerPage/GroupsListsIcon/GroupsListsIconScree
 import HomeIcon from "../ExplorerPage/HomeIcon/HomeScreenIcon";
 import WhatAreYouFeelingIconScreen from "../ExplorerPage/WhatAreYouFeelingIcon/WhatAreYouFeelingIconScreen";
 import YourFriendsIcon from "../ExplorerPage/YourFriendsIcon/YourFriendsIconScreen";
+import ProfilePopUp from "../ExplorerPage/ProfilePopUp/ProfilePopUp";
 
 
 
@@ -33,40 +34,40 @@ export default function YourFriends() {
 
     return(
         <View>
+          {/*<Image style={{height: 40, width: 40, top: 5, left: 5, borderRadius: 20}} source={{uri:"https://i.postimg.cc/85D8rG12/1552424-tilio-v1-ultrakill.jpg"}}/>*/}
           <View>
           <Text style={{top: -15, fontSize: 30, fontWeight: "bold", backgroundColor: "#065064", color: "#065064", paddingLeft: 250, paddingVertical: 20}}>Your Friends</Text>
-          <Image style={{height: 40, width: 40, top: 5, left: 5, borderRadius: 20}} source={{uri:"https://i.postimg.cc/85D8rG12/1552424-tilio-v1-ultrakill.jpg"}}/>
+          <Image style={{height: 40, width: 40, top: 45, left: 5, borderRadius: 20}} source={{uri:"https://i.postimg.cc/85D8rG12/1552424-tilio-v1-ultrakill.jpg"}}/>
+          <Image source={{uri:"https://i.postimg.cc/PxP8SMGm/Pasted-Graphic-3.png"}} style={{width: 40, height: 40, backgroundColor: '#13aa5f', borderWidth: 1, left: 310}}></Image>
+
           <Text style={styles.Friends}>
-            <Link href={'/Users/txthackathon/Desktop/project_armonia_mental_app-master/react/app/screens/YourFriends/FriendsProfile/TobyScreen.tsx'}>Toby Howard</Link>
-          <Image source={{uri:"https://i.postimg.cc/PxP8SMGm/Pasted-Graphic-3.png"}} style={{width: 40, height: 40, left: 350, backgroundColor: '#13aa5f', borderWidth: 1}}></Image>
+            <Link href={'/Users/txthackathon/Desktop/project_armonia_mental_app-master/react/app/screens/YourFriends/FriendsProfile/TobyScreen.tsx'}>Lewis Carroll</Link>
+            
           </Text>
+          
           </View>
           <View>
           <Image style={{height: 40, width: 40, top: 5, left: 5, borderRadius: 20,}} source={{uri:"https://i.postimg.cc/QMqT7Tqr/7d1a5405c173248616c34a760e4bf55e.jpg"}}/>
           <Text style={styles.Friends}>
             Bud Cullen
-          <Image source={{uri:"https://i.postimg.cc/PxP8SMGm/Pasted-Graphic-3.png"}} style={{width: 40, height: 40, left: 350, backgroundColor: '#13aa5f', borderWidth: 1}}></Image>
           </Text>
           </View>
           <View>
           <Image style={{height: 40, width: 40, top: 5, left: 5, borderRadius: 20}} source={{uri:"https://i.postimg.cc/V6x0QWfn/180px-Sentinelprimeanimatedbattlemask.jpg"}}/>
           <Text style={styles.Friends}>
             Derrick Milne
-          <Image source={{uri:"https://i.postimg.cc/PxP8SMGm/Pasted-Graphic-3.png"}} style={{width: 40, height: 40, left: 350, backgroundColor: '#13aa5f', borderWidth: 1}}></Image>
           </Text>
           </View>
           <View>
           <Image style={{height: 40, width: 40, top: 5, left: 5, borderRadius: 20}} source={{uri:"https://i.postimg.cc/gJd1MfRZ/a85c739094814807544ea6ea4243f22d.jpg"}}/>
           <Text style={styles.Friends}>
             Jessie Figueroa
-            <Image source={{uri:"https://i.postimg.cc/PxP8SMGm/Pasted-Graphic-3.png"}} style={{width: 40, height: 40, left: 350, backgroundColor: '#13aa5f', borderWidth: 1}}></Image>
             </Text>
           </View>
           <View>
           <Image style={{height: 40, width: 40, top: 5, left: 5, borderRadius: 20}} source={{uri:"https://i.postimg.cc/ydHDYX3H/ef5cccf401166ba9154039a39fdb29ee.jpg"}}/>
           <Text style={styles.Friends}>
             Dominic Fenix
-            <Image source={{uri:"https://i.postimg.cc/PxP8SMGm/Pasted-Graphic-3.png"}} style={{width: 40, height: 40, left: 350, backgroundColor: '#13aa5f', borderWidth: 1}}></Image>
             </Text>
           </View>
           <View style={styles.BackButton}>
@@ -75,13 +76,19 @@ export default function YourFriends() {
           <WhatAreYouFeelingIconScreen/>
           <GroupListsIcon/>
           </View>
+          <View>
+            <Text style={{top: -610, left: 40, color:'white', fontSize: 25}}>Your Friends</Text>
+          </View>
+          <View style={{top: -720, left: 140}}>
+            <ProfilePopUp/>
+          </View>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
   BackButton: {
-    top: 230,
+    top: 200,
     justifyContent: "space-evenly",
     left: 1,
     flexDirection: "row",
@@ -103,7 +110,9 @@ IconFriends: {
   width: 30
 },
 TrophyIcon: {
-  
+  width: 40, height: 40
 }
 
 });
+
+<Image source={{uri:"https://i.postimg.cc/PxP8SMGm/Pasted-Graphic-3.png"}} style={{width: 40, height: 40, backgroundColor: '#13aa5f', borderWidth: 1}}></Image>

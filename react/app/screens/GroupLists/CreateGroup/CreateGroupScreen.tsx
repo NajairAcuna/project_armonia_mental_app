@@ -9,12 +9,11 @@ import {
   Pressable
 } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome5";
-// import YourFriendsIcon from "../ExplorerPage/YourFriendsIcon/YourFriendsIconScreen";
-// import WhatAreYouFeelingIconScreen from "../ExplorerPage/WhatAreYouFeelingIcon/WhatAreYouFeelingIconScreen";
-// import GroupListsIcon from "../ExplorerPage/GroupsListsIcon/GroupsListsIconScreen";
-// import HomeIcon from "../ExplorerPage/HomeIcon/HomeScreenIcon";
-// import HomeIconButton from "../ExplorerPage/HomeIcon/HomeScreenIcon";
-// import ProfilePopUp from "../ExplorerPage/ProfilePopUp/ProfilePopUp";
+import GroupListsIcon from "../../ExplorerPage/GroupsListsIcon/GroupsListsIconScreen";
+import WhatAreYouFeelingIconScreen from "../../ExplorerPage/WhatAreYouFeelingIcon/WhatAreYouFeelingIconScreen";
+import YourFriendsIcon from "../../ExplorerPage/YourFriendsIcon/YourFriendsIconScreen";
+import ProfilePopUp from "../../ExplorerPage/ProfilePopUp/ProfilePopUp";
+import HomeIcon from "../../ExplorerPage/HomeIcon/HomeScreenIcon";
 
 export default function CreateGroup(){
   const [text, onChangeText] = React.useState('');
@@ -29,21 +28,37 @@ export default function CreateGroup(){
 
   return(
     <View>
-      <Text style={{textAlign: 'center', top: 100, fontSize: 40}}>Group name</Text>
+      <View style={{backgroundColor: '#065064', height: "16%"}}>
+        <Text style={{left: 30, top: 50, color:"white", fontSize: 25}}>Create new safe space</Text>
+        <View style={{left: 130, bottom: 45}}>
+        <ProfilePopUp/>
+        </View>
+      </View>
+      <Text style={{textAlign: 'center', top: 165, fontSize: 30}}>Group name</Text>
       <TextInput 
        style={styles.input}
        onChangeText={onChangeText}
        value={text}
       />
       <View>
-      <Text style={{textAlign: 'center', top: 150, fontSize: 40}}>Group Description</Text>
+      <Text style={{textAlign: 'center', top: 195, fontSize: 30, }}>Group Description</Text>
       <TextInput
-       style={styles.input}
+       style={styles.input2}
         onChangeText={description}
         value={text2}
       />
+      <View style={styles.IconsForBar}>
+        <YourFriendsIcon />
+        <HomeIcon />
+        <WhatAreYouFeelingIconScreen />
+        <GroupListsIcon />
       </View>
-      <Text style={{textAlign: 'center', top: 295, fontSize: 30, borderWidth: 1, alignSelf: 'center', borderRadius: 15,}}>Create group</Text>
+      </View>
+      <Image style={{width: "25%", height: '12%', top: -210, alignSelf: 'center', borderWidth: 1}} source={{uri:'https://i.postimg.cc/kX3NCNTc/Avatar-16-512.webp'}}/>
+      <View>
+      <View style={{backgroundColor: "#065064", width: "45%", height: "23%", alignSelf: 'center', top: 130, borderRadius: 120, borderWidth: 2, borderColor: 'grey'}}></View>
+      <Text style={{alignSelf: 'center', top: 87, fontSize: 30,color: 'white'}}>Create Group</Text>
+      </View>
     </View>
   )
 }
@@ -51,13 +66,33 @@ export default function CreateGroup(){
 const styles = StyleSheet.create({
   input: {
     left: 74,
+    width: 250,
+    height: 30,
+    borderWidth: 1,
+    padding: 35,
+    top: 170,
+    borderRadius: 20, 
+    color: 'black'
+  },
+  input2: {
+    left: 74,
     width: 255,
     height: 30,
     borderWidth: 1,
     padding: 35,
-    top: 10,
+    top: 200,
     borderRadius: 20, 
     color: 'black'
-  }
+  },
+  IconsForBar: {
+    top: 448,
+    justifyContent: "space-evenly",
+    left: 0,
+    flexDirection: "row",
+    backgroundColor: "#065064",
+    paddingBottom: 20,
+    borderWidth: 4,
+    borderColor: "#065064",
+  },
   
 });

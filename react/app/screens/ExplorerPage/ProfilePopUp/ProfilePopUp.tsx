@@ -47,19 +47,22 @@ export default function ProfilePopUp (){
              <View style={styles.modalContainer}>
                 <View style={styles.modalContent}>
                  <Text style={{color: "#30B18A", top: 5, fontSize: 20 }}>Name</Text>
-                 <Text style={{color:"white", top: 10}}>Name: Whirl C. Milne</Text>
+                 <Text style={{color:"white", top: 10}}>Name: William C. Milne</Text>
                  <Text style={{color:"#30B18A", top: 40, fontSize: 20}}>Trees</Text>
                  <Text style={{color: 'white', top:45}}>2</Text>
                  <Text style={{color:"#30B18A", top: 65, fontSize: 20}}>About me: </Text>
-                 <Text style={{color:"white", top: 80}}>Hi, my name is Willy!</Text>
-                 <Link style={{color:"#30B18A", top: 145, left: 4, borderWidth: 1, width: 120, backgroundColor: '#0CBEA2', borderColor: '#0CBEA2', borderBottomColor: "blue", borderBottomWidth: 10 }} href={'../TreeTimeScreen/TreeTime'} onPress={closeModal}>
-                 <Icon  name="tree" size={40} color={'#ACE2F0'}></Icon>
+                 <Text style={{color:"white", top: 80}}>Hi, my name is Willy! I like video games and art stuff</Text>
+                 <View style={{backgroundColor: '#0CBEA2', top: 145, width: 120, borderRadius: 10}}>
+                 <Link style={styles.myForest} href={'../TreeTimeScreen/TreeTime'} onPress={closeModal}>
+                 <Icon name="tree" size={35} color={'#ACE2F0'}></Icon>
                  <Text style={{color: '#ACE2F0'}}>my forest</Text>
                  </Link>
+                 </View>
                  <Icon style={{color:"#30B18A", top: -165, left: 230}}name="pencil-alt" size={35}></Icon>
                  <TouchableOpacity style={styles.closeButton}>
-                 <Link href={''}>
-                 <Text style={styles.modalText}>
+                 <Link style={styles.modalText} href={''}>
+                 <Icon name="sign-in-alt" size={30}/>
+                 <Text>
                     Log out
                     </Text>
                     </Link>
@@ -104,25 +107,32 @@ const styles = StyleSheet.create({
     },
     modalContent: {
         backgroundColor: '#065064',
-        padding: 20,
+        padding: 15,
         borderWidth: 5,
         borderColor: '#30B18A',
-        borderRadius: 25,
+        borderRadius: 15,
         width: '80%'
     },
     modalText: {
-        fontSize: 30,
+        top: 0,
+        fontSize: 25,
         color: "white",
-        borderWidth: 10,
-        borderRadius: 15, 
+        borderWidth: -32,
+        borderRadius: 20, 
         borderColor: "red",
+        paddingTop: 1,
+        left: 20
     },
     closeButton: {
         marginTop: 70,
         alignSelf: 'flex-end',
-        borderRadius: 20,
+        borderRadius: 10,
         backgroundColor: 'red',
-        fontSize: 20
+        fontSize: 20,
+        top: -6,
+        minWidth: 110,
+        height: 45,
+        paddingRight: 27
     },
     closeButtonText: {
         color: 'black',
@@ -130,6 +140,17 @@ const styles = StyleSheet.create({
     },
     IconsForPopUp: {
         borderWidth: 1, top: -125, left: 0,backgroundColor: "#026471", paddingBottom: 70, borderColor: "#026471",
-        },
+    },
+    myForest: {
+        color:"#30B18A",
+        top: -0,
+        left: 2, 
+        borderWidth: 3,
+        width: 120, 
+        borderColor: '#0CBEA2', 
+        borderBottomColor: "blue",
+        borderRadius:10,
+        borderBottomWidth: 10
+    }
 });
 

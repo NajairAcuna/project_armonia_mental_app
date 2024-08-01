@@ -20,6 +20,7 @@ import GroupListsIcon from "../ExplorerPage/GroupsListsIcon/GroupsListsIconScree
 import HomeIcon from "../ExplorerPage/HomeIcon/HomeScreenIcon";
 import HomeIconButton from "../ExplorerPage/HomeIcon/HomeScreenIcon";
 import ProfilePopUp from "../ExplorerPage/ProfilePopUp/ProfilePopUp";
+import { blue } from "react-native-reanimated/lib/typescript/reanimated2/Colors";
 
 
 export default function GroupLists() {
@@ -97,19 +98,20 @@ export default function GroupLists() {
             uri: "https://i.postimg.cc/4NR5n53F/9a09e5cafa643f6ec7b38c63766d5bf4.jpg",
           }}
         />
-        <Link style={{color:"#30B18A",left: 15, top: 85, backgroundColor: '#3EFFC5', alignSelf: "center", borderWidth: 1, borderRadius: 20, }} href={'../GroupLists/CreateGroup/CreateGroupScreen'}>
-        <Icon name="plus" size={50} ></Icon>
+        <Link style={{left: 30, top: 85 }} href={'../GroupLists/CreateGroup/CreateGroupScreen'}>
+        <Icon name="plus" size={50} style={{color:"#30B18A", backgroundColor: '#3EFFC5', borderWidth: 1}}></Icon>
         </Link>
+
       </View>
       <View style={{}}>
         <TextInput style={{height: 45, borderWidth: 1, top: -880, width: 220, left: 100, borderRadius: 25}} onChangeText={onChangeText} value={text}></TextInput>
         <Icon name="plus" size={25} style={{top: -916, left: 340, borderRadius: 10}}></Icon>
       </View>
       <View>
-        <Text style={{left: 115,top: -870, fontSize: 20, color: 'grey',}}>chat</Text>
-        <Text style={{left: 125,top: -850, fontSize: 20}}>#-General</Text>
-        <Text style={{left: 125,top: -825, fontSize: 20}}>#-Food</Text>
-        <Text style={{left: 125,top: -810, fontSize: 20}}>#-Photos</Text>
+        <Text style={{left: 115,top: -871, fontSize: 25, color: 'grey',}}>chat</Text>
+        <Text style={{left: 125,top: -851, fontSize: 25}}>#-General</Text>
+        <Text style={{left: 125,top: -841, fontSize: 25}}>#-Food</Text>
+        <Text style={{left: 125,top: -831, fontSize: 25}}>#-Photos</Text>
       </View>
       <View style={styles.IconsForChat}>
         <View style={styles.IconsForBar}>
@@ -124,9 +126,9 @@ export default function GroupLists() {
 }
 const styles = StyleSheet.create({
   IconsForChat: {
-    borderWidth: 1,
-    top: -145,
-    left: 1,
+    borderWidth: 0,
+    top: -170,
+    left: 0,
     backgroundColor: "#026471",
     paddingBottom: 70,
     borderColor: "#026471",

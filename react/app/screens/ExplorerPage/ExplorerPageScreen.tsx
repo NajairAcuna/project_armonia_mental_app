@@ -42,7 +42,6 @@ export default function ExplorerPage() {
   const closeModal = () => {
     setModalVisible(false);
   };
-  // const AnimatedLinearGradient = Animated.createAnimatedComponent(LinearGradient);
   return (
     <>
               <View style={styles.Container2}>
@@ -71,12 +70,12 @@ export default function ExplorerPage() {
 const styles = StyleSheet.create({
   view: {},
   IconsForBar: {
-    // top: -5,
+    top: 0,
     justifyContent: "space-evenly",
     left: 0,
     flexDirection: "row",
     backgroundColor: "#065064",
-    // paddingBottom: 40,
+    paddingBottom: 10,
     borderWidth: 4,
     borderColor: "#065064",
   },

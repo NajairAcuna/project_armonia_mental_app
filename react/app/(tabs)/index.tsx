@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Button, Image, Pressable, StyleSheet, Text, View, Modal, TextInput } from "react-native";
-import { Link } from "expo-router";
+import React, { useEffect, useState } from "react";
+import { Button, Image, StyleSheet, Text, View, Modal, TextInput } from "react-native";
+import { Link, useNavigation } from "expo-router";
 import axios from "axios";
 import LoginPopUp from "../screens/Login/LoginPopUpScreen";
 import { LinearGradient } from "expo-linear-gradient";
@@ -13,13 +13,20 @@ import { LinearGradient } from "expo-linear-gradient";
 // import { ThemedView } from "@/components/ThemedView";
 
 export default function HomeScreen() {
-  const testFunction = () => {
-    alert("Sign Up");
-  };
+  // const testFunction = () => {
+  //   alert("Sign Up");
+  // };
 
-  const [text, putUser] = React.useState("User ID:");
+  // const [text, putUser] = React.useState("User ID:");
   const [text2, putEmail] = React.useState("Email:");
   const [text3, putPassword] = React.useState("Password:");
+
+  const navigation = useNavigation();
+
+  useEffect(() => {
+    navigation.setOptions({headerShown: false});
+
+  }, [navigation]);
 
   return (
     <LinearGradient 
@@ -39,16 +46,29 @@ export default function HomeScreen() {
         value={text2}
         />
         <TextInput
-          style={styles.textInputs}
+          style={styles.textInputs2}
          onChangeText={putPassword}
          value={text3}
         />
       </View>
 
       {/* <Button title="Log In" color="grey" /> */}
-      <Link href="/screens/ExplorerPage/ExplorerPageScreen" asChild>
+      <Link style={{    textAlign: "center",
+    marginTop: 10,
+    paddingVertical: 4,
+    paddingHorizontal: 4,
+    borderWidth: 15,
+    borderColor: "#67e26d",
+    borderRadius: 10,
+    backgroundColor: "#67e26d",
+    color: "#13aa5f",
+    fontSize: 30,
+    fontWeight: "bold",
+    top: 280,
+    textDecorationColor: '#13aa5f',
+    }} href="/screens/ExplorerPage/ExplorerPageScreen" asChild>
         {/* <Pressable onPress={testFunction}> */}
-        <Text style={styles.title}>Login</Text>
+        <Text>Login</Text>
         {/* </Pressable> */}
       </Link>
       <Text style={styles.newAccount
@@ -69,19 +89,19 @@ const styles = StyleSheet.create({
     // backgroundColor: linear-gradient(180deg, rgba(0,56,85,1) 0%, rgba(6,80,100,1) 20%, rgba(1,114,96,1) 45%, rgba(19,170,95,1) 75%, rgba(103,226,96,1) 100%);
   },
   title: {
-    textAlign: "center",
-    marginTop: 10,
-    paddingVertical: 4,
-    paddingHorizontal: 4,
-    borderWidth: 10,
-    borderColor: "#67e26d",
-    borderRadius: 20,
-    backgroundColor: "#67e26d",
-    color: "#13aa5f",
-    fontSize: 30,
-    fontWeight: "bold",
-    top: 280,
-    textDecorationColor: '#13aa5f'
+    // textAlign: "center",
+    // marginTop: 10,
+    // paddingVertical: 4,
+    // paddingHorizontal: 4,
+    // borderWidth: 10,
+    // borderColor: "#67e26d",
+    // borderRadius: 30,
+    // backgroundColor: "#67e26d",
+    // color: "#13aa5f",
+    // fontSize: 30,
+    // fontWeight: "bold",
+    // top: 280,
+    // textDecorationColor: '#13aa5f',
   },
   Gradient: {
     flex: 1,
@@ -94,7 +114,9 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 10,
     top: 250,
-    backgroundColor: "white"
+    backgroundColor: "white",
+    borderTopEndRadius: 10,
+    borderTopLeftRadius: 10
   },
   motoYuda: {
     top: 100,
@@ -106,5 +128,14 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 15,
     color: 'white'
+  },
+  textInputs2: {
+    height: 40,
+    borderWidth: 1,
+    padding: 10,
+    top: 250,
+    backgroundColor: "white",
+    borderEndStartRadius: 10,
+    borderEndEndRadius: 10
   }
 });
