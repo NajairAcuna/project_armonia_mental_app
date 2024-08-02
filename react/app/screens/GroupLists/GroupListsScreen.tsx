@@ -111,8 +111,8 @@ export default function GroupLists() {
       <View>
         <Text style={{left: 115,top: -871, fontSize: 25, color: 'grey',}}>chat</Text>
         <Text style={{left: 125,top: -851, fontSize: 25}}>#-General</Text>
-        <Text style={{left: 125,top: -841, fontSize: 25}}>#-Food</Text>
-        <Text style={{left: 125,top: -831, fontSize: 25}}>#-Photos</Text>
+        <Text style={{left: 125,top: -841, fontSize: 25}}>#-Advices</Text>
+        <Text style={{left: 125,top: -831, fontSize: 25}}>#-Formulas</Text>
       </View>
       <View style={styles.IconsForChat}>
         <View style={styles.IconsForBar}>

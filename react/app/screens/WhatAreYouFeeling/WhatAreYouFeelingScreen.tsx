@@ -52,7 +52,7 @@ export default function WhatAreYouFeeling() {
         </View>
         <View style={{top: 240,borderWidth: 3, width: 350, alignSelf: 'center', paddingVertical: 45, borderRadius: 25, backgroundColor: "#8CDE90", borderColor: '#8CDE90', borderBottomColor: '#449B49', borderBottomWidth: 10}}>
           <TouchableOpacity  onPress={openModal}>
-          <Text style={{top: 5, textAlign: 'center', fontSize: 30, color: '#449B49', }}>Day reflection</Text>
+          <Text style={{top: 5, textAlign: 'center', fontSize: 30, color: '#449B49', }}>Day Reflection</Text>
           </TouchableOpacity>
           <Modal
           animationType="slide"
@@ -61,9 +61,9 @@ export default function WhatAreYouFeeling() {
           onRequestClose={closeModal}>
           <View style={styles.ModalContainer}>
             <View style={styles.modalContent}>
-              <Text style={{color: 'white', fontSize: 25}}>are you sure you want to use this prompt?</Text>
+              <Text style={{color: 'white', fontSize: 25, textAlign: 'center'}}>are you sure you want to use this prompt?</Text>
               <TouchableOpacity style={{}}>
-                <Link style={{top: 50, left: -40, borderWidth: 1, alignSelf: 'center',width: '25%',height: '35%', backgroundColor: '#6BD29F'}} href={''}>
+                <Link style={{top: 50, left: -40, borderWidth: 1, alignSelf: 'center',width: '25%',height: '35%', backgroundColor: '#6BD29F'}} href={'../WhatAreYouFeeling/Journal/JournalScreen'}>
                 <Text style={{textAlign: 'center'}} >Yes</Text>
                 </Link>
               </TouchableOpacity>

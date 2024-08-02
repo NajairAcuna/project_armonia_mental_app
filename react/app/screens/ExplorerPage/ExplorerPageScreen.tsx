@@ -51,7 +51,7 @@ export default function ExplorerPage() {
 
           <Text style={styles.MotivationalQuote}>"Have laughable dreams!"</Text>
       <ScrollView>
-        <View style={{ backgroundColor: "white", height: "120%", top: -10}}>
+        <View style={{ backgroundColor: "white", height: "120%", top: 20}}>
 
           <GeneralWellnessGroups />
         </View>
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-evenly",
     backgroundColor: "#065064",
-    paddingBottom: 100,
+    paddingBottom: 90,
     paddingLeft: 25,
     paddingRight: 26,
     borderWidth: 4,
