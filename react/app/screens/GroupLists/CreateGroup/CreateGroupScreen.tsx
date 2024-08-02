@@ -13,7 +13,7 @@ import GroupListsIcon from "../../ExplorerPage/GroupsListsIcon/GroupsListsIconSc
 import WhatAreYouFeelingIconScreen from "../../ExplorerPage/WhatAreYouFeelingIcon/WhatAreYouFeelingIconScreen";
 import YourFriendsIcon from "../../ExplorerPage/YourFriendsIcon/YourFriendsIconScreen";
 import ProfilePopUp from "../../ExplorerPage/ProfilePopUp/ProfilePopUp";
-import HomeIcon from "../../ExplorerPage/HomeIcon/HomeScreenIcon";
+import HomeIcon from "app/screens/ExplorerPage/HomeIcon/HomeScreenIcon";
 
 export default function CreateGroup(){
   const [text, onChangeText] = React.useState('');

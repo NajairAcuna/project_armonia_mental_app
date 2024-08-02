@@ -12,7 +12,6 @@ import {
   Modal,
 } from "react-native";
 import Icon from 'react-native-vector-icons/FontAwesome5';
-// import {AutoGrowingTextInput} from 'react-native-autogrow-textinput';
 
 import { Link,useNavigation } from "expo-router";
 import GroupListsIcon from "../ExplorerPage/GroupsListsIcon/GroupsListsIconScreen";

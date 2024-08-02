@@ -18,7 +18,7 @@ import Svg, { Circle } from 'react-native-svg';
 import { Link } from "expo-router";
 
 
-export default function ProfilePopUp (){
+export default function ProfilePopUp (this: any){
     const [modalVisible, setModalVisible] = useState(false);
    
     const openModal = () => {
@@ -38,13 +38,18 @@ export default function ProfilePopUp (){
             <TouchableOpacity  onPress={openModal}>
             <Image style={styles.openButton}  source={{uri:"https://i.postimg.cc/tRdpRdVr/1273655-squarerootofdestiny-whirl-icon-commission.jpg"}} onProgress={openModal}/>
             </TouchableOpacity>
+
             <Modal
              animationType='fade'
              transparent={true}
              visible={modalVisible}
              onRequestClose={closeModal}>
+
              <View style={styles.modalContainer}>
+             <TouchableOpacity onPress={closeModal}>
+
                 <View style={styles.modalContent}>
+                    
                  <Text style={{color: "#30B18A", top: 5, fontSize: 20 }}>Name</Text>
                  <Text style={{color:"white", top: 10}}>Name: William C. Milne</Text>
                  <Text style={{color:"#30B18A", top: 40, fontSize: 20}}>Trees</Text>
@@ -54,19 +59,20 @@ export default function ProfilePopUp (){
                  <View style={{backgroundColor: '#0CBEA2', top: 145, width: 120, borderRadius: 10}}>
                  <Link style={styles.myForest} href={'../TreeTimeScreen/TreeTime'} onPress={closeModal}>
                  <Icon name="tree" size={35} color={'#ACE2F0'}></Icon>
-                 <Text style={{color: '#ACE2F0'}}>my forest</Text>
+                 <Text style={{color: '#ACE2F0', fontSize: 20}}>my forest</Text>
                  </Link>
                  </View>
                  <Icon style={{color:"#30B18A", top: -165, left: 230}}name="pencil-alt" size={35}></Icon>
                  <TouchableOpacity style={styles.closeButton}>
                  <Link style={styles.modalText} href={''}>
-                 <Icon name="sign-in-alt" size={30}/>
+                 <Icon name="sign-in-alt" size={20}/>
                  <Text>
                     Log out
                     </Text>
                     </Link>
                 </TouchableOpacity>
                 </View>
+                </TouchableOpacity>
             </View>
          </Modal>
         </View>
