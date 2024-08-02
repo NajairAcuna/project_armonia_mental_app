@@ -50,19 +50,19 @@ export default function ProfilePopUp (this: any){
 
                 <View style={styles.modalContent}>
                     
-                 <Text style={{color: "#30B18A", top: 5, fontSize: 20 }}>Name</Text>
-                 <Text style={{color:"white", top: 10}}>Name: William C. Milne</Text>
-                 <Text style={{color:"#30B18A", top: 40, fontSize: 20}}>Trees</Text>
+                 <Text style={{color: "#53CB8A", top: 5, fontSize: 20 }}>Name</Text>
+                 <Text style={{color:"white", top: 10}}>William C. Milne</Text>
+                 <Text style={{color:"#53CB8A", top: 40, fontSize: 20}}>Trees</Text>
                  <Text style={{color: 'white', top:45}}>2</Text>
-                 <Text style={{color:"#30B18A", top: 65, fontSize: 20}}>About me: </Text>
+                 <Text style={{color:"#53CB8A", top: 65, fontSize: 20}}>About me: </Text>
                  <Text style={{color:"white", top: 80}}>Hi, my name is Willy! I like video games and art stuff</Text>
                  <View style={{backgroundColor: '#0CBEA2', top: 145, width: 120, borderRadius: 10}}>
                  <Link style={styles.myForest} href={'../TreeTimeScreen/TreeTime'} onPress={closeModal}>
-                 <Icon name="tree" size={35} color={'#ACE2F0'}></Icon>
+                 <Icon name="tree" size={35} color={'#1A6A43'}></Icon>
                  <Text style={{color: '#ACE2F0', fontSize: 20}}>my forest</Text>
                  </Link>
                  </View>
-                 <Icon style={{color:"#30B18A", top: -165, left: 230}}name="pencil-alt" size={35}></Icon>
+                 <Icon style={{color:"#1A6A43", top: -165, left: 230}}name="pencil-alt" size={35}></Icon>
                  <TouchableOpacity style={styles.closeButton}>
                  <Link style={styles.modalText} href={''}>
                  <Icon name="sign-in-alt" size={20}/>
@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     modalContent: {
-        backgroundColor: '#065064',
+        backgroundColor: "#1EA060",
         padding: 15,
         borderWidth: 5,
         borderColor: '#30B18A',
@@ -146,13 +146,12 @@ const styles = StyleSheet.create({
         borderWidth: 1, top: -125, left: 0,backgroundColor: "#026471", paddingBottom: 70, borderColor: "#026471",
     },
     myForest: {
-        color:"#30B18A",
+        color:"#D4FFEA",
         top: -0,
         left: 2, 
         borderWidth: 3,
         width: 120, 
-        borderColor: '#0CBEA2', 
-        borderBottomColor: "blue",
+        borderColor: '#1A6A43', 
         borderRadius:10,
         borderBottomWidth: 10
     }
