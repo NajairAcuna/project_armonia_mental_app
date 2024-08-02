@@ -32,9 +32,9 @@ export default function GeneralWellnessGroups() {
           router.navigate({
             pathname: "/screens/YourWellnessGroups/YourWellnessGroupsScreen",
             params: {
-              title: "Depression",
+              title: "Academic Stress",
               about:
-                "You can also navigate imperatively using the router object. This is useful when you need to perform a navigation action outside a React component, such as in an event handler or a utility function.",
+                "For people who struggle with school",
               members: 10,
             },
           });
@@ -58,30 +58,30 @@ export default function GeneralWellnessGroups() {
         > */}
           <Text
             style={{
-              top: 10,
+              top: 15,
               left: -5,
               fontSize: 20,
               fontWeight: "bold",
               textAlign: "right",
             }}
           >
-            Alcoholic {"\n"} Anonymous {"\n"}
+            Academic {"\n"} Stress {"\n"}
           </Text>
           <Text style={{ fontSize: 20, textAlign: "right" , left:-10}}>
-            For {"\n"} struggling {"\n"} alcoholics
+            For people {"\n"} struggling {"\n"} with school. 
           </Text>
           {/* </Link> */}
           <Image
             style={{
               height: 170,
               width: 170,
-              top: -145,
+              top: -160,
               left: 10,
               backgroundColor: "#dedede",
               borderRadius: 20,
             }}
             source={{
-              uri: "https://i.postimg.cc/7L9cnR56/Pasted-Graphic-2.png",
+              uri: "https://i.postimg.cc/XqRtmDRM/Pasted-Graphic.png",
             }}
           />
         </View>
@@ -101,27 +101,27 @@ export default function GeneralWellnessGroups() {
           <Text
             style={{
               top: 0,
-              left: -50,
+              left: 1,
               fontSize: 20,
               fontWeight: "bold",
               textAlign: "right",
             }}
           >
-            Gymming {"\n"}
+            Coping with loss {"\n"}
           </Text>
           <Text style={{ textAlign: "right", fontSize: 20 }}>
-            Deal with {"\n"} your emotions in {"\n"} a positive way
+            Have you {"\n"} lost someone? {"\n"} come and {"\n"} talk about it
           </Text>
           <Image
             style={{
               height: 160,
               width: 160,
-              top: -110,
+              top: -140,
               left: -0,
               borderRadius: 20,
             }}
             source={{
-              uri: "https://i.postimg.cc/KzXKQ0w6/ff8b2f16dcb5f23231bc7166e143a328.jpg",
+              uri: "https://i.postimg.cc/QNvtjNsD/Pasted-Graphic-1.png",
             }}
           />
         </View>
@@ -141,7 +141,7 @@ export default function GeneralWellnessGroups() {
           <Text
             style={{
               top: 0,
-              left: -50,
+              left: -10,
               fontSize: 20,
               fontWeight: "bold",
               textAlign: "right",

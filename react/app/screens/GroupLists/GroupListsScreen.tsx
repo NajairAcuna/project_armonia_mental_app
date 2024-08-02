@@ -48,7 +48,7 @@ export default function GroupLists() {
           borderBottomWidth: 20
         }}
       >
-        Alcoholic Anonymous
+        Academic Stress
       </Text>
       <View style={{bottom:50}}>
         <View  style={{left: 150, bottom: 60}}>
@@ -78,12 +78,12 @@ export default function GroupLists() {
             borderRadius: 20,
             left: 15,
           }}
-          source={{ uri: "https://i.postimg.cc/7L9cnR56/Pasted-Graphic-2.png" }}
+          source={{ uri: "https://i.postimg.cc/XqRtmDRM/Pasted-Graphic.png" }}
         />
         <Image
           style={{ height: 70, width: 70, top: 30, left: 15, borderRadius: 20 }}
           source={{
-            uri: "https://i.postimg.cc/KzXKQ0w6/ff8b2f16dcb5f23231bc7166e143a328.jpg",
+            uri: "https://i.postimg.cc/28FfgCS2/Pasted-Graphic-1.png",
           }}
         />
         <Image

@@ -31,7 +31,6 @@ export default function ProfilePopUp (){
 
     const closeModal = () => {
         setModalVisible(false);
-        
     };
 
     return (

@@ -51,7 +51,7 @@ export default function ExplorerPage() {
 
           <Text style={styles.MotivationalQuote}>"Have laughable dreams!"</Text>
       <ScrollView>
-        <View style={{ backgroundColor: "white" }}>
+        <View style={{ backgroundColor: "white", height: "120%", top: -10}}>
 
           <GeneralWellnessGroups />
         </View>

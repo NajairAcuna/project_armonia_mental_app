@@ -38,43 +38,38 @@ export default function YourFriends() {
           <View>
           <Text style={{top: -15, fontSize: 30, fontWeight: "bold", backgroundColor: "#065064", color: "#065064", paddingLeft: 250, paddingVertical: 20}}>Your Friends</Text>
           <Image style={{height: 40, width: 40, top: 40, left: 5, borderRadius: 20}} source={{uri:"https://i.postimg.cc/85D8rG12/1552424-tilio-v1-ultrakill.jpg"}}/>
-          <Image source={{uri:"https://i.postimg.cc/PxP8SMGm/Pasted-Graphic-3.png"}} style={{width: 40, height: 40, backgroundColor: '#13aa5f', borderWidth: 1, left: 320}}></Image>
-
+          <Image source={{uri:"https://i.postimg.cc/kXzRMmNK/Pasted-Graphic.png"}} style={{width: 40, height: 40, backgroundColor: '#13aa5f', borderWidth: 1, left: 320}}></Image>
           <Text style={styles.Friends}>
             <Link href={'/Users/txthackathon/Desktop/project_armonia_mental_app-master/react/app/screens/YourFriends/FriendsProfile/TobyScreen.tsx'}>Lewis Carroll</Link>
-            
           </Text>
-          
           </View>
           <View>
           <Image style={{height: 40, width: 40, top: 40, left: 5, borderRadius: 20,}} source={{uri:"https://i.postimg.cc/QMqT7Tqr/7d1a5405c173248616c34a760e4bf55e.jpg"}}/>
-          <Image source={{uri:"https://i.postimg.cc/PxP8SMGm/Pasted-Graphic-3.png"}} style={{width: 40, height: 40, backgroundColor: '#13aa5f', borderWidth: 1, left: 320}}></Image>
+          <Image source={{uri:"https://i.postimg.cc/kXzRMmNK/Pasted-Graphic.png"}} style={{width: 40, height: 40, backgroundColor: '#13aa5f', borderWidth: 1, left: 320}}></Image>
           <Text style={styles.Friends}>
             Bud Cullen
           </Text>
           </View>
           <View>
           <Image style={{height: 40, width: 40, top: 40, left: 5, borderRadius: 20}} source={{uri:"https://i.postimg.cc/V6x0QWfn/180px-Sentinelprimeanimatedbattlemask.jpg"}}/>
-          <Image source={{uri:"https://i.postimg.cc/PxP8SMGm/Pasted-Graphic-3.png"}} style={{width: 40, height: 40, backgroundColor: '#13aa5f', borderWidth: 1, left: 320}}></Image>
+          <Image source={{uri:"https://i.postimg.cc/kXzRMmNK/Pasted-Graphic.png"}} style={{width: 40, height: 40, backgroundColor: '#13aa5f', borderWidth: 1, left: 320}}></Image>
           <Text style={styles.Friends}>
             Derrick Milne
           </Text>
           </View>
           <View>
           <Image style={{height: 40, width: 40, top: 40, left: 5, borderRadius: 20}} source={{uri:"https://i.postimg.cc/gJd1MfRZ/a85c739094814807544ea6ea4243f22d.jpg"}}/>
-          <Image source={{uri:"https://i.postimg.cc/PxP8SMGm/Pasted-Graphic-3.png"}} style={{width: 40, height: 40, backgroundColor: '#13aa5f', borderWidth: 1, left: 320}}></Image>
-
+          <Image source={{uri:"https://i.postimg.cc/kXzRMmNK/Pasted-Graphic.png"}} style={{width: 40, height: 40, backgroundColor: '#13aa5f', borderWidth: 1, left: 320}}></Image>
           <Text style={styles.Friends}>
             Jessie Figueroa
-            </Text>
+          </Text>
           </View>
           <View>
           <Image style={{height: 40, width: 40, top: 40, left: 5, borderRadius: 20}} source={{uri:"https://i.postimg.cc/ydHDYX3H/ef5cccf401166ba9154039a39fdb29ee.jpg"}}/>
-          <Image source={{uri:"https://i.postimg.cc/PxP8SMGm/Pasted-Graphic-3.png"}} style={{width: 40, height: 40, backgroundColor: '#13aa5f', borderWidth: 1, left: 320}}></Image>
-
+          <Image source={{uri:"https://i.postimg.cc/kXzRMmNK/Pasted-Graphic.png"}} style={{width: 40, height: 40, backgroundColor: '#13aa5f', borderWidth: 1, left: 320}}></Image>
           <Text style={styles.Friends}>
             Dominic Fenix
-            </Text>
+          </Text>
           </View>
           <View style={styles.BackButton}>
           <YourFriendsIcon/>
