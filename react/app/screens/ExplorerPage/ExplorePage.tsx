@@ -31,28 +31,29 @@ import HomeIcon from "./HomeIcon/HomeScreenIcon";
 import HomeIconButton from "./HomeIcon/HomeScreenIcon";
 import { FlatList } from "react-native-gesture-handler";
 
-export default function ExplorerPage() {
+export default function ExplorePage() {
   const navigation = useNavigation();
 
-  useEffect(() => {
-    navigation.setOptions({ headerShown: false });
-  }, [navigation]);
+  // useEffect(() => {
+  //   navigation.setOptions({ headerShown: false });
+  // }, [navigation]);
 
   const [modalVisible, setModalVisible] = useState(false);
+
   const closeModal = () => {
     setModalVisible(false);
   };
+
   return (
     <>
-              <View style={styles.Container2}>
-            <SearchBarComponent />
-            <ProfilePopUp />
-          </View>
+      <View style={styles.Container2}>
+        <SearchBarComponent />
+        <ProfilePopUp />
+      </View>
 
-          <Text style={styles.MotivationalQuote}>"Have laughable dreams!"</Text>
+      <Text style={styles.MotivationalQuote}>"Have laughable dreams!"</Text>
       <ScrollView>
-        <View style={{ backgroundColor: "white", height: "120%", top: 20}}>
-
+        <View style={{ backgroundColor: "white", height: "120%", top: 20 }}>
           <GeneralWellnessGroups />
         </View>
       </ScrollView>
