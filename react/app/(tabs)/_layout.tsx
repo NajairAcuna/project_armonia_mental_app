@@ -48,6 +48,20 @@ export default function TabLayout() {
           ),
         }}
       />
+      <Tabs.Screen
+        name="journal"
+        options={{
+          title: "Journal",
+          // tabBarIconStyle: { color: "#C2F9DE" },
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon
+              name={"book"}
+              color={focused ? "#C2F9DE" : "#15a95f"}
+              size={34}
+            />
+          ),
+        }}
+      />
     </Tabs>
   );
 }

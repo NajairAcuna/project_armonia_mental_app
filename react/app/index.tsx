@@ -20,7 +20,7 @@ import { LinearGradient } from "expo-linear-gradient";
 // import { ThemedText } from "@/components/ThemedText";
 // import { ThemedView } from "@/components/ThemedView";
 
-export default function HomeScreen() {
+export default function LoginScreen() {
   // const testFunction = () => {
   //   alert("Sign Up");
   // };
@@ -29,11 +29,11 @@ export default function HomeScreen() {
   const [text2, putEmail] = React.useState("Email:");
   const [text3, putPassword] = React.useState("Password:");
 
-  const navigation = useNavigation();
+  // const navigation = useNavigation();
 
-  useEffect(() => {
-    navigation.setOptions({ headerShown: false });
-  }, [navigation]);
+  // useEffect(() => {
+  //   navigation.setOptions({ headerShown: false });
+  // }, [navigation]);
 
   return (
     <LinearGradient

@@ -14,158 +14,66 @@ import {
   BackHandler,
   ViewStyle,
   Pressable,
+  FlatList,
 } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome5";
 
 export default function GeneralWellnessGroups() {
+  const wellnessGroups = [
+    {
+      id: 1,
+      imageSource: require("@/assets/images/icons/loss_group_icon.png"),
+      title: "Coping With Loss",
+      description: "Have you lost someone? Come and talk about it",
+    },
+    {
+      id: 2,
+      imageSource: require("@/assets/images/icons/stress_group_icon.png"),
+      title: "Managing Stress",
+      description: "Learn techniques to manage and reduce stress",
+    },
+    {
+      id: 3,
+      imageSource: require("@/assets/images/icons/fitness_group_icon.png"),
+      title: "Fitness and Wellness",
+      description: "Join us for fitness and wellness activities",
+    },
+    // Add more objects as needed
+  ];
+
   return (
-    <View
-      style={{
-        flex: 1,
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "flex-start",
-      }}
-    >
-      <Pressable
-        onPress={() => {
-          router.navigate({
-            pathname: "/screens/YourWellnessGroups/YourWellnessGroupsScreen",
-            params: {
-              title: "Academic Stress",
-              about:
-                "For people who struggle with school",
-              members: 10,
-            },
-          });
-        }}
-      >
-        <View
-          style={{
-            width: 350,
-            height: 200,
-            backgroundColor: "#F2F2F2",
-            padding: 10,
-            top: -20,
-            borderWidth: 5,
-            borderColor: "#F2F2F2",
-            borderRadius: 35,
-          }}
-        >
-          {/* <Link
-          href="/screens/YourWellnessGroups/YourWellnessGroupsScreen"
-          style={{}}
-        > */}
-          <Text
-            style={{
-              top: 15,
-              left: -5,
-              fontSize: 20,
-              fontWeight: "bold",
-              textAlign: "right",
-            }}
-          >
-            Academic {"\n"} Stress {"\n"}
-          </Text>
-          <Text style={{ fontSize: 20, textAlign: "right" , left:-10}}>
-            For people {"\n"} struggling {"\n"} with school. 
-          </Text>
-          {/* </Link> */}
-          <Image
-            style={{
-              height: 170,
-              width: 170,
-              top: -160,
-              left: 10,
-              backgroundColor: "#dedede",
-              borderRadius: 20,
-            }}
-            source={{
-              uri: "https://i.postimg.cc/XqRtmDRM/Pasted-Graphic.png",
-            }}
-          />
-        </View>
+    // <View style={{ alignItems: "center" }}>
 
-        <View
-          style={{
-            width: 350,
-            height: 200,
-            backgroundColor: "#F2F2F2",
-            padding: 10,
-            marginTop: 5,
-            borderWidth: 5,
-            borderColor: "#F2F2F2",
-            borderRadius: 35,
-          }}
-        >
-          <Text
-            style={{
-              top: 0,
-              left: 1,
-              fontSize: 20,
-              fontWeight: "bold",
-              textAlign: "right",
-            }}
-          >
-            Coping with loss {"\n"}
-          </Text>
-          <Text style={{ textAlign: "right", fontSize: 20 }}>
-            Have you {"\n"} lost someone? {"\n"} come and {"\n"} talk about it
-          </Text>
-          <Image
-            style={{
-              height: 160,
-              width: 160,
-              top: -140,
-              left: -0,
-              borderRadius: 20,
-            }}
-            source={{
-              uri: "https://i.postimg.cc/QNvtjNsD/Pasted-Graphic-1.png",
-            }}
-          />
-        </View>
-
-        <View
-          style={{
-            width: 350,
-            height: 200,
-            backgroundColor: "#F2F2F2",
-            padding: 10,
-            marginTop: 25,
-            borderWidth: 5,
-            borderColor: "#F2F2F2",
-            borderRadius: 35,
-          }}
-        >
-          <Text
-            style={{
-              top: 0,
-              left: -10,
-              fontSize: 20,
-              fontWeight: "bold",
-              textAlign: "right",
-            }}
-          >
-            Broken Trust {"\n"}
-          </Text>
-          <Text style={{ textAlign: "right", fontSize: 20 }}>
-            Cheated on? {"\n"} Friend hurt you? {"\n"} Join here
-          </Text>
-          <Image
-            style={{
-              height: 135,
-              width: 135,
-              top: -120,
-              left: 10,
-              borderRadius: 20,
-            }}
-            source={{
-              uri: "https://i.postimg.cc/4NR5n53F/9a09e5cafa643f6ec7b38c63766d5bf4.jpg",
-            }}
-          />
-        </View>
-      </Pressable>
+    //   <View style={styles.groupContainer}>
+    //     <Image
+    //       source={require("@/assets/images/icons/loss_group_icon.png")}
+    //       style={{ width: 118, height: 111, left: 20, top: 30 }}
+    //     />
+    //     <View style={styles.textContainer}>
+    //       <Text style={styles.title}>Copying With Loss</Text>
+    //       <Text style={styles.description}>
+    //         Have you lost someone? Come and talk about it
+    //       </Text>
+    //     </View>
+    //   </View>
+    //   </View>
+    <View style={{ alignItems: "center" }}>
+      <FlatList
+        data={wellnessGroups}
+        keyExtractor={(item) => item.id.toString()}
+        renderItem={({ item }) => (
+          <View style={styles.groupContainer}>
+            <Image
+              source={item.imageSource}
+              style={{ width: 118, height: 111, left: 20, top: 30 }}
+            />
+            <View style={styles.textContainer}>
+              <Text style={styles.title}>{item.title}</Text>
+              <Text style={styles.description}>{item.description}</Text>
+            </View>
+          </View>
+        )}
+      />
     </View>
   );
 }
@@ -188,5 +96,47 @@ const styles = StyleSheet.create({
   ImageGroup: {
     width: 90,
     height: 80,
+  },
+  groupContainer: {
+    borderRadius: 25,
+    borderWidth: 0,
+    borderColor: "#000",
+    backgroundColor: "rgba(129, 221, 241, 0.32)",
+    shadowColor: "#DADADA",
+    shadowOffset: { width: 6, height: 10 },
+    shadowOpacity: 0.8,
+    shadowRadius: 16,
+    elevation: 5, // For Android shadow
+    width: 344,
+    height: 171,
+    flexDirection: "row",
+  },
+  textContainer: {
+    // flex: 1,
+    marginLeft: 20,
+    maxWidth: 200, // Adjust this value as needed
+    flexDirection: "column",
+    // padding: 5,
+    // right: 0,
+    position: "absolute",
+    top: 30,
+    right: 0,
+  },
+  title: {
+    fontSize: 18,
+    fontWeight: "bold",
+    // flexShrink: 1,
+    flexWrap: "wrap",
+    textAlign: "center",
+    // top: 30,
+  },
+  description: {
+    fontSize: 14,
+    // flexShrink: 1,
+    flexWrap: "wrap",
+    top: 20,
+    // right: 10,
+    padding: 5,
+    textAlign: "center",
   },
 });

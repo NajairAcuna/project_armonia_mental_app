@@ -20,7 +20,7 @@ import GroupListsIcon from "../ExplorerPage/GroupsListsIcon/GroupsListsIconScree
 import HomeIcon from "../ExplorerPage/HomeIcon/HomeScreenIcon";
 import WhatAreYouFeelingIconScreen from "../ExplorerPage/WhatAreYouFeelingIcon/WhatAreYouFeelingIconScreen";
 import YourFriendsIcon from "../ExplorerPage/YourFriendsIcon/YourFriendsIconScreen";
-import ProfilePopUp from "../ExplorerPage/ProfilePopUp/ProfilePopUp";
+import ProfilePopUp from "../../../components/ProfilePopUp";
 
 
 

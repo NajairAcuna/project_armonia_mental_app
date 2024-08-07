@@ -16,7 +16,7 @@ import {
 } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome5";
 import Svg, { Circle } from "react-native-svg";
-import { Link } from "expo-router";
+import { Link, router } from "expo-router";
 import { BlurView } from "expo-blur";
 
 export default function ProfilePopUp({
@@ -35,6 +35,11 @@ export default function ProfilePopUp({
   //       setVisible(true);
   //     }
   //   };
+
+  const logOut = () => {
+    // router.navigate("/index");
+    console.log("log out");
+  };
 
   const closeModal = () => {
     setVisible(false);
@@ -122,7 +127,7 @@ export default function ProfilePopUp({
                   />
                 </TouchableOpacity>
 
-                <TouchableOpacity>
+                <TouchableOpacity onPress={logOut}>
                   <Image
                     source={require("@/assets/images/buttons/log_out_button.png")}
                     style={styles.logOutIcon}

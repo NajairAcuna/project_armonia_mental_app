@@ -14,7 +14,7 @@ import {
   ImageBackground,
 } from "react-native";
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import ProfilePopUp from "../../ExplorerPage/ProfilePopUp/ProfilePopUp";
+import ProfilePopUp from "../../../../components/ProfilePopUp";
 import GroupListsIcon from "../../ExplorerPage/GroupsListsIcon/GroupsListsIconScreen";
 import HomeIcon from "../../ExplorerPage/HomeIcon/HomeScreenIcon";
 import WhatAreYouFeelingIconScreen from "../../ExplorerPage/WhatAreYouFeelingIcon/WhatAreYouFeelingIconScreen";

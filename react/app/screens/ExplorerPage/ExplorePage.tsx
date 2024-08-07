@@ -16,7 +16,7 @@ import {
 } from "react-native";
 import SearchBarComponent from "./SearchBar/SearchBarComponent";
 import GeneralWellnessGroups from "./GeneralWellnessGroups/GeneralWellnessGroups";
-import ProfilePopUp from "./ProfilePopUp/ProfilePopUp";
+import ProfilePopUp from "../../../components/ProfilePopUp";
 import Icon from "react-native-vector-icons/FontAwesome5";
 import { Link, useNavigation } from "expo-router";
 import YourFriends from "../YourFriends/YourFriendsScreen";

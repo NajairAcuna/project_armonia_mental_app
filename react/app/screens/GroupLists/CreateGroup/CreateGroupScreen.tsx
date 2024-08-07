@@ -12,7 +12,7 @@ import Icon from "react-native-vector-icons/FontAwesome5";
 import GroupListsIcon from "../../ExplorerPage/GroupsListsIcon/GroupsListsIconScreen";
 import WhatAreYouFeelingIconScreen from "../../ExplorerPage/WhatAreYouFeelingIcon/WhatAreYouFeelingIconScreen";
 import YourFriendsIcon from "../../ExplorerPage/YourFriendsIcon/YourFriendsIconScreen";
-import ProfilePopUp from "../../ExplorerPage/ProfilePopUp/ProfilePopUp";
+import ProfilePopUp from "../../../../components/ProfilePopUp";
 import HomeIcon from "app/screens/ExplorerPage/HomeIcon/HomeScreenIcon";
 
 export default function CreateGroup(){

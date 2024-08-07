@@ -19,7 +19,7 @@ import WhatAreYouFeelingIconScreen from "../ExplorerPage/WhatAreYouFeelingIcon/W
 import GroupListsIcon from "../ExplorerPage/GroupsListsIcon/GroupsListsIconScreen";
 import HomeIcon from "../ExplorerPage/HomeIcon/HomeScreenIcon";
 import HomeIconButton from "../ExplorerPage/HomeIcon/HomeScreenIcon";
-import ProfilePopUp from "../ExplorerPage/ProfilePopUp/ProfilePopUp";
+import ProfilePopUp from "../../../components/ProfilePopUp";
 import { blue } from "react-native-reanimated/lib/typescript/reanimated2/Colors";
 
 

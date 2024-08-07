@@ -16,183 +16,103 @@ import {
 // import LinearGradient from "react-native-linear-gradient";
 import Icon from "react-native-vector-icons/FontAwesome";
 import LinearGradient from "expo-linear-gradient";
+import TopBar from "@/components/TopBar";
 
 export default function FriendsScreen() {
-  const navigation = useNavigation();
+  //   const navigation = useNavigation();
 
-  useEffect(() => {
-    navigation.setOptions({ headerShown: false });
-  }, [navigation]);
+  //   useEffect(() => {
+  //     navigation.setOptions({ headerShown: false });
+  //   }, [navigation]);
+
+  //   const [modalVisible, setModalVisible] = useState(false);
+  //   const openModal = () => {
+  //     setModalVisible(true);
+  //   };
+
+  const friendsData = [
+    {
+      uri: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
+      name: "John Doe",
+    },
+    {
+      uri: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
+      name: "Jane Smith",
+    },
+    {
+      uri: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
+      name: "Alice Johnson",
+    },
+    {
+      uri: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
+      name: "Bob Brown",
+    },
+    {
+      uri: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
+      name: "Mario Cortez",
+    },
+    {
+      uri: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
+      name: "Luis Miguel",
+    },
+    // Add more objects as needed
+  ];
 
   return (
     <View>
-      {/*<Image style={{height: 40, width: 40, top: 5, left: 5, borderRadius: 20}} source={{uri:"https://i.postimg.cc/85D8rG12/1552424-tilio-v1-ultrakill.jpg"}}/>*/}
+      <TopBar title={"Your Friends"} />
       <View>
-        <Text
-          style={{
-            top: -15,
-            fontSize: 30,
-            fontWeight: "bold",
-            backgroundColor: "#065064",
-            color: "#065064",
-            paddingLeft: 250,
-            paddingVertical: 20,
-          }}
-        >
-          Your Friends
-        </Text>
-        <Image
-          style={{ height: 40, width: 40, top: 40, left: 5, borderRadius: 20 }}
-          source={{
-            uri: "https://i.postimg.cc/85D8rG12/1552424-tilio-v1-ultrakill.jpg",
-          }}
-        />
-        <Image
-          source={{ uri: "https://i.postimg.cc/kXzRMmNK/Pasted-Graphic.png" }}
-          style={{
-            width: 40,
-            height: 40,
-            backgroundColor: "#13aa5f",
-            borderWidth: 1,
-            left: 320,
-          }}
-        ></Image>
-        <Text style={styles.Friends}>
-          <Link
-            href={
-              "/Users/txthackathon/Desktop/project_armonia_mental_app-master/react/app/screens/YourFriends/FriendsProfile/TobyScreen.tsx"
-            }
-          >
-            Lewis Carroll
-          </Link>
-        </Text>
+        <View style={{ marginTop: 20 }}>
+          {friendsData.map((friend, index) => (
+            <View key={index} style={styles.friendContainer}>
+              <Image source={{ uri: friend.uri }} style={styles.image} />
+              <Text style={styles.name}>{friend.name}</Text>
+              <TouchableOpacity style={styles.iconContainer}>
+                <Image
+                  source={require("@/assets/images/icons/forest_icon.png")}
+                  style={styles.icon}
+                />
+              </TouchableOpacity>
+            </View>
+          ))}
+        </View>
       </View>
-      <View>
-        <Image
-          style={{ height: 40, width: 40, top: 40, left: 5, borderRadius: 20 }}
-          source={{
-            uri: "https://i.postimg.cc/QMqT7Tqr/7d1a5405c173248616c34a760e4bf55e.jpg",
-          }}
-        />
-        <Image
-          source={{ uri: "https://i.postimg.cc/kXzRMmNK/Pasted-Graphic.png" }}
-          style={{
-            width: 40,
-            height: 40,
-            backgroundColor: "#13aa5f",
-            borderWidth: 1,
-            left: 320,
-          }}
-        ></Image>
-        <Text style={styles.Friends}>Bud Cullen</Text>
-      </View>
-      <View>
-        <Image
-          style={{ height: 40, width: 40, top: 40, left: 5, borderRadius: 20 }}
-          source={{
-            uri: "https://i.postimg.cc/V6x0QWfn/180px-Sentinelprimeanimatedbattlemask.jpg",
-          }}
-        />
-        <Image
-          source={{ uri: "https://i.postimg.cc/kXzRMmNK/Pasted-Graphic.png" }}
-          style={{
-            width: 40,
-            height: 40,
-            backgroundColor: "#13aa5f",
-            borderWidth: 1,
-            left: 320,
-          }}
-        ></Image>
-        <Text style={styles.Friends}>Derrick Milne</Text>
-      </View>
-      <View>
-        <Image
-          style={{ height: 40, width: 40, top: 40, left: 5, borderRadius: 20 }}
-          source={{
-            uri: "https://i.postimg.cc/gJd1MfRZ/a85c739094814807544ea6ea4243f22d.jpg",
-          }}
-        />
-        <Image
-          source={{ uri: "https://i.postimg.cc/kXzRMmNK/Pasted-Graphic.png" }}
-          style={{
-            width: 40,
-            height: 40,
-            backgroundColor: "#13aa5f",
-            borderWidth: 1,
-            left: 320,
-          }}
-        ></Image>
-        <Text style={styles.Friends}>Jessie Figueroa</Text>
-      </View>
-      <View>
-        <Image
-          style={{ height: 40, width: 40, top: 40, left: 5, borderRadius: 20 }}
-          source={{
-            uri: "https://i.postimg.cc/ydHDYX3H/ef5cccf401166ba9154039a39fdb29ee.jpg",
-          }}
-        />
-        <Image
-          source={{ uri: "https://i.postimg.cc/kXzRMmNK/Pasted-Graphic.png" }}
-          style={{
-            width: 40,
-            height: 40,
-            backgroundColor: "#13aa5f",
-            borderWidth: 1,
-            left: 320,
-          }}
-        ></Image>
-        <Text style={styles.Friends}>Dominic Fenix</Text>
-      </View>
-
-      {/* <View style={styles.BackButton}>
-        <YourFriendsIcon />
-        <HomeIcon />
-        <WhatAreYouFeelingIconScreen />
-        <GroupListsIcon />
-      </View> */}
-      <View>
-        <Text style={{ top: -675, left: 40, color: "white", fontSize: 25 }}>
-          Your Friends
-        </Text>
-      </View>
-      {/* <View style={{ top: -775, left: 140 }}>
-        <ProfilePopUp />
-      </View> */}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  BackButton: {
-    top: 125,
-    justifyContent: "space-evenly",
-    left: 0,
+  friendContainer: {
     flexDirection: "row",
-    backgroundColor: "#065064",
-    paddingBottom: 20,
-    borderWidth: 8,
-    borderColor: "#065064",
-  },
-  Friends: {
-    fontSize: 40,
-    top: -35,
-    left: 65,
-    margin: -10,
-  },
-  IconFriends: {
-    top: 100,
-    right: 175,
+    alignItems: "center",
     alignSelf: "center",
-    height: 30,
-    width: 30,
+    borderBottomWidth: 1,
+    paddingBottom: 10,
+    width: 400,
+    marginBottom: 10, // Add some space between items
   },
-  TrophyIcon: {
-    width: 40,
-    height: 40,
+  image: {
+    width: 61,
+    height: 61,
+    borderRadius: 30,
+    marginRight: 30,
+  },
+  name: {
+    fontSize: 30,
+  },
+  iconContainer: {
+    position: "absolute",
+    right: 10,
+  },
+  icon: {
+    width: 43,
+    height: 45,
   },
 });
 
-<Image
+{
+  /* <Image
   source={{ uri: "https://i.postimg.cc/PxP8SMGm/Pasted-Graphic-3.png" }}
   style={{ width: 40, height: 40, backgroundColor: "#13aa5f", borderWidth: 1 }}
-></Image>;
+></Image>; */
+}
