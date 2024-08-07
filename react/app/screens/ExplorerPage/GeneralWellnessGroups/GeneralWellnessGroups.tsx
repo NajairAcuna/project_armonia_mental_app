@@ -41,28 +41,26 @@ export default function GeneralWellnessGroups() {
     // Add more objects as needed
   ];
 
-  return (
-    // <View style={{ alignItems: "center" }}>
+  const handlePress = (image, groupTitle: string, groupDescription: string) => {
+    console.log("Seeing Group:", groupTitle);
+    router.navigate({
+      pathname: "joinGroup",
+      params: { image, groupTitle, groupDescription },
+    });
+  };
 
-    //   <View style={styles.groupContainer}>
-    //     <Image
-    //       source={require("@/assets/images/icons/loss_group_icon.png")}
-    //       style={{ width: 118, height: 111, left: 20, top: 30 }}
-    //     />
-    //     <View style={styles.textContainer}>
-    //       <Text style={styles.title}>Copying With Loss</Text>
-    //       <Text style={styles.description}>
-    //         Have you lost someone? Come and talk about it
-    //       </Text>
-    //     </View>
-    //   </View>
-    //   </View>
+  return (
     <View style={{ alignItems: "center" }}>
       <FlatList
         data={wellnessGroups}
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
-          <View style={styles.groupContainer}>
+          <TouchableOpacity
+            style={styles.groupContainer}
+            onPress={() =>
+              handlePress(item.imageSource, item.title, item.description)
+            }
+          >
             <Image
               source={item.imageSource}
               style={{ width: 118, height: 111, left: 20, top: 30 }}
@@ -71,7 +69,7 @@ export default function GeneralWellnessGroups() {
               <Text style={styles.title}>{item.title}</Text>
               <Text style={styles.description}>{item.description}</Text>
             </View>
-          </View>
+          </TouchableOpacity>
         )}
       />
     </View>
@@ -102,14 +100,15 @@ const styles = StyleSheet.create({
     borderWidth: 0,
     borderColor: "#000",
     backgroundColor: "rgba(129, 221, 241, 0.32)",
-    shadowColor: "#DADADA",
-    shadowOffset: { width: 6, height: 10 },
-    shadowOpacity: 0.8,
-    shadowRadius: 16,
+    // shadowColor: "#DADADA",
+    // shadowOffset: { width: 6, height: 10 },
+    // shadowOpacity: 0.8,
+    // shadowRadius: 16,
     elevation: 5, // For Android shadow
     width: 344,
     height: 171,
     flexDirection: "row",
+    marginTop: 25,
   },
   textContainer: {
     // flex: 1,

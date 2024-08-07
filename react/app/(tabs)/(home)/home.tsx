@@ -17,10 +17,10 @@ import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { useNavigation } from "expo-router";
 import { useEffect, useState } from "react";
-import SearchBarComponent from "../screens/ExplorerPage/SearchBar/SearchBarComponent";
-import ProfilePopUp from "../../components/ProfilePopUp";
-import GeneralWellnessGroups from "../screens/ExplorerPage/GeneralWellnessGroups/GeneralWellnessGroups";
-import YourFriendsIcon from "../screens/ExplorerPage/YourFriendsIcon/YourFriendsIconScreen";
+import SearchBarComponent from "../../screens/ExplorerPage/SearchBar/SearchBarComponent";
+import ProfilePopUp from "../../../components/ProfilePopUp";
+import GeneralWellnessGroups from "../../screens/ExplorerPage/GeneralWellnessGroups/GeneralWellnessGroups";
+import YourFriendsIcon from "../../screens/ExplorerPage/YourFriendsIcon/YourFriendsIconScreen";
 
 export default function HomeScreen() {
   // const navigation = useNavigation();
@@ -48,11 +48,11 @@ export default function HomeScreen() {
       </View>
 
       <Text style={styles.MotivationalQuote}>"Have laughable dreams!"</Text>
-      <ScrollView style={{ backgroundColor: "white" }}>
-        <View style={{ top: 50 }}>
-          <GeneralWellnessGroups />
-        </View>
-      </ScrollView>
+      {/* <ScrollView style={{ backgroundColor: "white" }}> */}
+      {/* <View style={{ top: 50 }}> */}
+      <GeneralWellnessGroups />
+      {/* </View> */}
+      {/* </ScrollView> */}
     </>
   );
 }

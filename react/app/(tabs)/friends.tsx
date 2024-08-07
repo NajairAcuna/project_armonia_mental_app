@@ -19,17 +19,6 @@ import LinearGradient from "expo-linear-gradient";
 import TopBar from "@/components/TopBar";
 
 export default function FriendsScreen() {
-  //   const navigation = useNavigation();
-
-  //   useEffect(() => {
-  //     navigation.setOptions({ headerShown: false });
-  //   }, [navigation]);
-
-  //   const [modalVisible, setModalVisible] = useState(false);
-  //   const openModal = () => {
-  //     setModalVisible(true);
-  //   };
-
   const friendsData = [
     {
       uri: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",

@@ -35,7 +35,7 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="home"
+        name="(home)"
         options={{
           title: "Home",
           // tabBarIconStyle: { color: "#C2F9DE" },
@@ -56,6 +56,21 @@ export default function TabLayout() {
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon
               name={"book"}
+              color={focused ? "#C2F9DE" : "#15a95f"}
+              size={34}
+            />
+          ),
+        }}
+      />
+
+      <Tabs.Screen
+        name="safeSpaces"
+        options={{
+          title: "Safe Spaces",
+          // tabBarIconStyle: { color: "#C2F9DE" },
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon
+              name={"hand-left"}
               color={focused ? "#C2F9DE" : "#15a95f"}
               size={34}
             />
