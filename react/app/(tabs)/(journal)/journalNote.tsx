@@ -1,29 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   Image,
   StyleSheet,
   Text,
   View,
-  Dimensions,
   ImageBackground,
   TextInput,
+  TouchableOpacity,
 } from "react-native";
 
-import { Link, useNavigation } from "expo-router";
+import { router } from "expo-router";
 import TopBar from "@/components/TopBar";
-// import GroupListsIcon from "../ExplorerPage/GroupsListsIcon/GroupsListsIconScreen";
-// import HomeIcon from "../ExplorerPage/HomeIcon/HomeScreenIcon";
-// import WhatAreYouFeelingIconScreen from "../ExplorerPage/WhatAreYouFeelingIcon/WhatAreYouFeelingIconScreen";
-// import YourFriendsIcon from "../ExplorerPage/YourFriendsIcon/YourFriendsIconScreen";
-// import ProfilePopUp from "../../../components/ProfilePopUp";
 
 export default function JournalNoteScreen() {
-  const [modalVisible, setModalVisible] = useState(false);
   const [text, onChangeText] = React.useState("Type here");
-
-  //   const { width: screenWidth } = Dimensions.get("window");
-
-  // ../WhatAreYouFeeling/Journal/JournalScreen
 
   return (
     <View>
@@ -35,28 +25,30 @@ export default function JournalNoteScreen() {
             what happened today
           </Text>
         </View>
-        <ImageBackground
-          source={require("@/assets/extras/bookmark_journal.png")}
-          style={{
-            width: 75,
-            height: 70,
-            position: "absolute",
-            right: 20,
-            top: 110,
-          }}
+        <TouchableOpacity
+          style={{ position: "absolute", right: 20, top: 110 }}
+          onPress={() => router.navigate("journalEntries")}
         >
-          <Text
+          <ImageBackground
+            source={require("@/assets/extras/bookmark_journal.png")}
             style={{
-              color: "white",
-              textAlign: "center",
-              top: 10,
-              fontWeight: "bold",
-              fontSize: 15,
+              width: 75,
+              height: 70,
             }}
           >
-            8/10/24
-          </Text>
-        </ImageBackground>
+            <Text
+              style={{
+                color: "white",
+                textAlign: "center",
+                top: 10,
+                fontWeight: "bold",
+                fontSize: 15,
+              }}
+            >
+              8/10/24
+            </Text>
+          </ImageBackground>
+        </TouchableOpacity>
         <Image
           source={require("@/assets/extras/journal_spiral.png")}
           style={{
@@ -104,7 +96,6 @@ const styles = StyleSheet.create({
     paddingTop: 13,
   },
   input: {
-
     fontSize: 26,
     fontFamily: "Times New Roman",
     color: "#55503C",

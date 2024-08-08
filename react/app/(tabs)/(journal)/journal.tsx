@@ -5,11 +5,6 @@ import {
   StyleSheet,
   Text,
   View,
-  SafeAreaView,
-  TextInput,
-  TouchableOpacity,
-  SwitchComponent,
-  Modal,
   Dimensions,
   Pressable,
 } from "react-native";

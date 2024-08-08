@@ -22,6 +22,7 @@ export default function StackLayout() {
     >
       <Stack.Screen name="journal" />
       <Stack.Screen name="journalNote" />
+      <Stack.Screen name="journalEntries" />
     </Stack>
   );
 }

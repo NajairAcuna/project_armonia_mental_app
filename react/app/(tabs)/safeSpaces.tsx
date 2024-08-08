@@ -49,22 +49,30 @@ export default function SafeSpacesScreen() {
 
   return (
     <View>
-      <TopBar title={"Your Friends"} />
-      <View>
-        <View style={{ marginTop: 20 }}>
-          {friendsData.map((friend, index) => (
-            <View key={index} style={styles.friendContainer}>
-              <Image source={{ uri: friend.uri }} style={styles.image} />
-              <Text style={styles.name}>{friend.name}</Text>
-              <TouchableOpacity style={styles.iconContainer}>
-                <Image
-                  source={require("@/assets/images/icons/forest_icon.png")}
-                  style={styles.icon}
-                />
-              </TouchableOpacity>
-            </View>
-          ))}
-        </View>
+      <TopBar title={"Safe Spaces"} />
+      <Image
+        source={require("@/assets/images/groupChat.png")}
+        style={{
+          width: 367,
+          resizeMode: "contain",
+          position: "absolute",
+          right: 0,
+          top: -230,
+        }}
+      />
+      <View style={styles.leftChatBar}>
+        <Image
+          source={require("@/assets/images/icons/fitness_group_icon.png")}
+          style={styles.leftIcons}
+        />
+        <Image
+          source={require("@/assets/images/icons/loss_group_icon.png")}
+          style={[styles.leftIcons, styles.leftIcon2]}
+        />
+        <Image
+          source={require("@/assets/images/icons/academic_groupChat_icon.png")}
+          style={[styles.leftIcons, styles.leftIcon3]}
+        />
       </View>
     </View>
   );
@@ -96,5 +104,28 @@ const styles = StyleSheet.create({
   icon: {
     width: 43,
     height: 45,
+  },
+  leftChatBar: {
+    width: 85,
+    backgroundColor: "#30B18A",
+    height: "100%",
+    flexDirection: "column",
+  },
+  leftIcons: {
+    width: 50,
+    height: 50,
+    // position: "absolute",
+    left: 17,
+    top: 20,
+    borderRadius: 15,
+  },
+  leftIcon2: {
+    // position: "absolute",
+    left: 17,
+    top: 50,
+  },
+  leftIcon3: {
+    top: 80,
+    borderRadius: 0,
   },
 });
