@@ -39,7 +39,10 @@ export default function HomeScreen() {
 
       <View style={styles.Container2}>
         {/* <SearchBarComponent /> */}
-        <TouchableOpacity style={styles.avatarContainer}>
+        <TouchableOpacity
+          style={styles.avatarContainer}
+          onPress={() => setModalVisible(true)}
+        >
           <Image
             source={require("@/assets/images/icons/avatar_icon.png")}
             style={{ width: 67, height: 67 }}

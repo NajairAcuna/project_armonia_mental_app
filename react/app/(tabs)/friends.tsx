@@ -1,4 +1,4 @@
-import { Link, useNavigation } from "expo-router";
+import { Link, router, useNavigation } from "expo-router";
 import React, { useEffect, useState } from "react";
 import {
   Alert,
@@ -56,7 +56,10 @@ export default function FriendsScreen() {
             <View key={index} style={styles.friendContainer}>
               <Image source={{ uri: friend.uri }} style={styles.image} />
               <Text style={styles.name}>{friend.name}</Text>
-              <TouchableOpacity style={styles.iconContainer}>
+              <TouchableOpacity
+                style={styles.iconContainer}
+                onPress={() => router.navigate("treeScreen")}
+              >
                 <Image
                   source={require("@/assets/images/icons/forest_icon.png")}
                   style={styles.icon}

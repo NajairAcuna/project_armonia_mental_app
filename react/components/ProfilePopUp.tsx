@@ -103,24 +103,13 @@ export default function ProfilePopUp({
                 </Text>
               </View>
 
-              {/* <Link
-                style={styles.myForest}
-                href={"../TreeTimeScreen/TreeTime"}
-                onPress={closeModal}
-              >
-                <Icon name="tree" size={35} color={"#1A6A43"}></Icon>
-                <Text style={{ color: "#ACE2F0", fontSize: 20 }}>
-                  my forest
-                </Text>
-              </Link> */}
-
-              {/* <Icon
-                style={{ color: "#1A6A43", top: -165, left: 230 }}
-                name="pencil-alt"
-                size={35}
-              ></Icon> */}
               <View style={styles.buttonsContainer}>
-                <TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => {
+                    closeModal();
+                    router.navigate("treeScreen");
+                  }}
+                >
                   <Image
                     source={require("@/assets/images/buttons/my_forest_button.png")}
                     style={styles.forestIcon}
@@ -133,12 +122,6 @@ export default function ProfilePopUp({
                     style={styles.logOutIcon}
                   />
                 </TouchableOpacity>
-                {/* <TouchableOpacity style={styles.closeButton}>
-                <Link style={styles.modalText} href={""}>
-                  <Icon name="sign-in-alt" size={20} />
-                  <Text>Log out</Text>
-                </Link>
-              </TouchableOpacity> */}
               </View>
             </View>
 

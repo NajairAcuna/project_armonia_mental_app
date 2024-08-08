@@ -49,7 +49,7 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="journal"
+        name="(journal)"
         options={{
           title: "Journal",
           // tabBarIconStyle: { color: "#C2F9DE" },

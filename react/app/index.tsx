@@ -1,39 +1,20 @@
 import React, { useEffect, useState } from "react";
 import {
-  Button,
   Image,
   StyleSheet,
   Text,
   View,
-  Modal,
   TextInput,
-  Pressable,
   TouchableOpacity,
 } from "react-native";
 import { Link, router, useNavigation } from "expo-router";
-import axios from "axios";
-import LoginPopUp from "./screens/Login/LoginPopUpScreen";
+
 import { LinearGradient } from "expo-linear-gradient";
 
-// import { HelloWave } from "@/components/HelloWave";
-// import ParallaxScrollView from "@/components/ParallaxScrollView";
-// import { ThemedText } from "@/components/ThemedText";
-// import { ThemedView } from "@/components/ThemedView";
-
 export default function LoginScreen() {
-  // const testFunction = () => {
-  //   alert("Sign Up");
-  // };
-
   // const [text, putUser] = React.useState("User ID:");
   const [text2, putEmail] = React.useState("Email:");
   const [text3, putPassword] = React.useState("Password:");
-
-  // const navigation = useNavigation();
-
-  // useEffect(() => {
-  //   navigation.setOptions({ headerShown: false });
-  // }, [navigation]);
 
   return (
     <LinearGradient
@@ -102,21 +83,7 @@ const styles = StyleSheet.create({
     // backgroundColor: rgb(0,56,85),
     // backgroundColor: linear-gradient(180deg, rgba(0,56,85,1) 0%, rgba(6,80,100,1) 20%, rgba(1,114,96,1) 45%, rgba(19,170,95,1) 75%, rgba(103,226,96,1) 100%);
   },
-  title: {
-    // textAlign: "center",
-    // marginTop: 10,
-    // paddingVertical: 4,
-    // paddingHorizontal: 4,
-    // borderWidth: 10,
-    // borderColor: "#67e26d",
-    // borderRadius: 30,
-    // backgroundColor: "#67e26d",
-    // color: "#13aa5f",
-    // fontSize: 30,
-    // fontWeight: "bold",
-    // top: 280,
-    // textDecorationColor: '#13aa5f',
-  },
+  title: {},
   Gradient: {
     flex: 1,
     paddingLeft: 15,
